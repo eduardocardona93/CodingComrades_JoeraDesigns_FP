@@ -35,31 +35,32 @@
           <p>Please fill in this form to create an account.</p>
           <hr>
           <label for="firstName"><b>First Name</b></label>
-          <input type="text" name="firstName" required>
+          <input type="text" name="firstName" id="firstName"  required>
 
           <label for="lastName"><b>Last Name</b></label>
-          <input type="text" name="lastName" required>
+          <input type="text" name="lastName" id="lastName" required>
 
           <label for="yearOfBirth"><b>Year of Birth</b></label>
-          <input type="text" name="yearOfBirth" required>
+          <input type="text" name="yearOfBirth" id="yearOfBirth" required>
 
 
           <label for="email"><b>Email Address</b></label>
-          <input type="email" name="email" required>
+          <input type="email" name="email" id="email" required>
 
 
           <label for="psw"><b>Password</b></label>
-          <input type="password" name="psw" required>
+          <input type="password" name="psw" id="psw" required>
 
-          <label for="psw-repeat"><b>Confirm Password</b></label>
-          <input type="password" name="psw-repeat" required>
+          <label for="confirmPassword"><b>Confirm Password</b></label>
+          <input type="password" name="confirmPassword" id="confirmPassword" required>
+
           <label for="gender"><b>Gender</b></label>
           <br>
           <div class="controls">
-            <input type="radio" id="genderMale" name="male" value="30">
-            <label class="radio" for="male">Male</label><br>
-            <input type="radio" id="genderFemale" name="female" value="60">
-            <label class="radio" for="female">female</label><br>
+            <input type="radio" id="genderMale" name="male">
+            <label class="radio" for="genderMale">Male</label><br>
+            <input type="radio" id="genderFemale" name="female">
+            <label class="radio" for="genderFemale">female</label><br>
           </div>
 
           <br>
