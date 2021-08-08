@@ -1,13 +1,12 @@
-
-// wait for the DOM to be loaded
-$(document).ready(function() {
-    // bind 'myForm' and provide a simple callback function
-    $('#registerForm').submit(function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        alert("Thank you for your comment!");
-        const firstNameInput = $('#firstName');
-        const lastNameInput = $('#lastName');
-        
-    });
-});
+// get the form
+const registerForm  = document.getElementById("registerForm");
+// set the onsubmit function callback
+registerForm.onsubmit = function(e) {
+    //prevent reload
+    e.preventDefault();
+    e.stopPropagation();
+    // get the firstName input value
+    const firstNameInput = document.getElementById("firstName").value;
+    //print
+    alert(firstNameInput)
+};
