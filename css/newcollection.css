@@ -1,0 +1,116 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, nav, button, section, header, footer, title, wix-iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body{
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.collectionList{
+    margin: 0 calc(10px * -1 + 1px);
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    line-height: normal;
+}
+
+.colItem{
+    width: calc(100% / 4 + 0px);
+    padding: 10px;
+    display: flex;
+}
+
+
+
+.itemRoot{
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgb(28, 28, 28);
+    border-width: 0px;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-style: solid;
+}
+
+.itemAnchor{
+    flex: 1;
+    text-decoration: none;
+}
+
+.itemImageDiv{
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.itemHoverDiv{
+    display: none;
+}
+
+.previewBtn{
+display: none;
+}
+
+.colItem:hover .itemHoverDiv{
+    display: flex
+}
+.colItem:hover .itemInnerDiv{
+    display: none
+}
+
+.colItem:hover .previewBtn{
+    font: normal normal normal 18px/1.75em brandon-grot-w01-light,brandon-grot-w05-light,sans-serif;
+    color: rgb(28, 28, 28);
+    background-color: rgba(255, 255, 255, 0.75);
+    
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 50px;
+    line-height: 50px !important;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 399ms;
+    transition-property: transform;
+}
+div.itemDetail{
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    text-decoration: none;
+    word-wrap: break-word;
+    padding-bottom: 0px;
+    margin: 0;
+    text-align: left;
+    padding: 15px 0px 0;
+    text-align: center;
+    
+}
+
+div.divPrice{
+    color: #555555;
+    font: normal normal normal 15px/1.875em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    color: rgb(28, 28, 28);
+    margin-left: -10px;
+}
+
+span.spanPrice{
+    margin-left: 10px;
+    display: inline-flex;
+}
