@@ -1,0 +1,10 @@
+#containter {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    margin-top: .2em;
+    text-align: center;
+}
