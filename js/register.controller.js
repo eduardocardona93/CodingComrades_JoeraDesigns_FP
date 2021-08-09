@@ -12,9 +12,10 @@
 // };
 
 const IDB = (function init() {
+
     let db = null;
     let objectStore = null;
-    let DBOpenReq = indexedDB.open('JoeraDB', 1);
+    let DBOpenReq = indexedDB.open('JoeraDB', 2);
   
     DBOpenReq.addEventListener('error', (err) => {
       //Error occurred while trying to open DB
@@ -37,7 +38,6 @@ const IDB = (function init() {
       let newVersion = ev.newVersion || db.version;
       console.log('Database updated from version', oldVersion, 'to version', newVersion);
   
-     
       if (db.objectStoreNames.contains('userStore')) {
         db.deleteObjectStore('userStore');
       }
@@ -54,6 +54,7 @@ const IDB = (function init() {
       ev.preventDefault();
       //one of the form buttons was clicked
   
+      console.log("Sign up clicked");
       let firstName = document.getElementById('firstName').value.trim();
       let lastName = document.getElementById('lastName').value.trim();
       let yearOfBirth = document.getElementById('yearOfBirth').value.trim();
@@ -63,11 +64,7 @@ const IDB = (function init() {
       let gender = document.getElementById('genderMale').checked ? "Male" : "Female";
       let comments = document.getElementById('comments').value.trim();
       let consent = document.getElementById('consent').value;
-  
-      let timmy = Date.now().toString(36).toLocaleUpperCase();
-      let randy = parseInt(Math.random() * Number.MAX_SAFE_INTEGER);
-      randy = randy.toString(36).slice(0, 12).padStart(12, '0').toLocaleUpperCase();
-      let id = ''.concat(timmy, '-', randy);
+      let id = Math.floor(100000 + Math.random() * 900000);
 
       let user = {
        id,
@@ -115,4 +112,5 @@ const IDB = (function init() {
       if (ev) ev.preventDefault();
       document.registrationForm.reset();
     }
+
   })();
