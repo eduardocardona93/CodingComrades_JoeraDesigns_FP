@@ -7,7 +7,7 @@ const loginController = (function init() {
     //REGEX
     let emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    var userList = {};
+    var userList = [];
 
     DBOpenReq.addEventListener('error', (err) => {
         //Error occurred while trying to open DB
@@ -53,16 +53,27 @@ const loginController = (function init() {
         };
         
         let store = transaction.objectStore('userStore');
-        let getReq = store.getAll(); //key or keyrange optional
-    
-        getReq.onsuccess = (ev) => {
-           //getAll was successful
-           let request = ev.target; //request === getReq === ev.target
-           userList = request.result;
-           console.log("userList: ", userList);
-        };
-         getReq.onerror = (err) => {
-           console.warn(err);
+        let index = store.index('emailIDX');
+        let range = IDBKeyRange.bound('A', 'z', false, false); //case sensitive A-Z a-z
+        index.openCursor(range, 'next').onsuccess = (ev) => {
+            let cursor = ev.target.result;
+            if (cursor) {
+              console.log(
+                cursor.source.objectStore.name,
+                cursor.source.name,
+                cursor.direction,
+                cursor.key,
+                cursor.primaryKey
+              );
+              let user = cursor.value;
+             
+              userList.push(user);
+
+              cursor.continue(); //call onsuccess
+            } else {
+              console.log('end of cursor');
+              console.log("userlist: ", userList);
+            }
         };
     }
     
@@ -78,6 +89,7 @@ const loginController = (function init() {
         ev.preventDefault();
 
         console.log("Login clicked");
+        console.log("userlist: ", userList);
         var userExist = false;
         var password = "";
         let loginEmail = document.getElementById('uname').value.trim();
