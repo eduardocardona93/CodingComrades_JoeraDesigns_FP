@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joera Designs</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/index/styles.css" />
 </head>
 
 <body>
@@ -32,11 +32,12 @@
 
     <!-- main content of the website -->
     <main>
-      <form style="border:1px solid #ccc" name="registrationForm">
-        <div class="container">
-          <h1>Sign Up</h1>
-          <p>Please fill in this form to create an account.</p>
-          <hr>
+      <div class="container"></div>
+      <form name="registrationForm">
+        
+          <h1>SIGN UP</h1>
+         
+         
           <label for="firstName"><b>First Name</b></label>
           <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,5}" required>
 
@@ -77,7 +78,7 @@
           <label for="comments"><b>Comments</b></label>
           <textarea name="comments" id="comments" rows="3" cols="25"></textarea>
 
-
+          <br>
           <label>
             <input id="consent" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Information provided is
             true and correct
@@ -88,8 +89,9 @@
             <button id="btnClearAll" type="reset" class="clearbtn">Clear All</button>
             <button id="btnSignUp" type="submit" class="signupbtn">Sign Up</button>
           </div>
-        </div>
+       
       </form>
+    </div>
     </main>
 
     <!-- footer of the webpage -->
@@ -98,7 +100,7 @@
         <a href="mailto:fitnessclub@club.net">fitnessclub@club.net</a> -->
     </footer>
 
-    <script src="../js/constant.js"></script>
+   
     <script src="../js/register.controller.js"></script>
   </div>
 </body>

@@ -17,6 +17,13 @@ footer {
     margin-top: 2em;
 }
 
+.mobile{
+    display: inline;
+}
+.desktop{
+    display: none;
+}
+
 /*navbar container*/
 .navbar {
     
@@ -145,3 +152,137 @@ footer {
 .dropdown_2:hover .dropdown-content {
     display: block;
 }
+/* -------------------------------------------Registration Login Form--------------------------------------------------- */
+/* Headine Style*/
+form h1{
+    text-align: center;
+    color: #56819E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+/* Input text login and registration */
+input[type=text], input[type=password] , input[type=email], input[type=tel], input[type=url], textarea{
+    width: 100%;
+    padding: 0.8em 0.8em;
+    margin: 0.8em 0;
+    display: inline-block;
+    border: 0.1em solid #000;
+    box-sizing: border-box;
+  }
+
+/* Sumbmit Buttons */
+button[type=submit]{
+    background-color: black;
+    color: white;
+    padding: 5px 26px 5px 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+/* Sumbmit Buttons */
+button[type=reset]{
+    background-color: red;
+    color: white;
+    padding: 5px 26px 5px 26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* ---------------------navigation bar --------------------------- */
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay .. check js*/   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 1); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 35%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: left; /* Centered text/links */
+    margin-left: 40px;
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+
+    }
+  
+  }
+
+  /* --------------------Media Query for the tablet view port targets screen only ----------------------------------------*/
+/* minimum width is 481px */
+@media only screen and (min-width: 685px) {
+
+    /* Change form with for tab*/
+    main form {
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+   
+    }
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: inline;
+    }
+
+  }
+  
+  
+  /* Media query for desktop width size */
+  @media only screen and (min-width: 860px) {
+
+     /* Change form with for desktop*/
+    main form {
+  
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: inline;
+    }
+  }
+  
