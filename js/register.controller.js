@@ -1,22 +1,15 @@
-// // get the form
-// const registerForm  = document.getElementById("registerForm");
-// // set the onsubmit function callback
-// registerForm.onsubmit = function(e) {
-//     //prevent reload
-//     e.preventDefault();
-//     e.stopPropagation();
-//     // get the firstName input value
-//     const firstNameInput = document.getElementById("firstName").value;
-//     //print
-//     alert(firstNameInput)
-// };
-
 const IDB = (function init() {
 
     let db = null;
     let objectStore = null;
-    let DBOpenReq = indexedDB.open('JoeraDB', 2);
-  
+    let DBOpenReq = indexedDB.open('JoeraDB', 3);
+    
+    //REGEX
+    let nameRegex = /^[a-zA-Z ]+$/;
+    let emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let phoneRegex = /^[0-9]{10}$/;
+    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
     DBOpenReq.addEventListener('error', (err) => {
       //Error occurred while trying to open DB
       console.warn(err);
@@ -46,8 +39,9 @@ const IDB = (function init() {
       objectStore = db.createObjectStore('userStore', {
         keyPath: 'id',
       });
+      
       //add the indexes
-      //objectStore.createIndex('nameIDX', 'name', { unique: false });
+      objectStore.createIndex('emailIDX', 'email', { unique: false });
     });
   
     document.getElementById('btnSignUp').addEventListener('click', (ev) => {
@@ -57,26 +51,65 @@ const IDB = (function init() {
       console.log("Sign up clicked");
       let firstName = document.getElementById('firstName').value.trim();
       let lastName = document.getElementById('lastName').value.trim();
-      let yearOfBirth = document.getElementById('yearOfBirth').value.trim();
+      let birthday = document.getElementById('birthday').value.trim();
       let email = document.getElementById('email').value.trim();
       let phone = document.getElementById('phone').value.trim();
       let psw = document.getElementById('psw').value.trim();
+      let cpsw = document.getElementById('confirmPassword').value.trim();
+      let pUrl = document.getElementById('pUrl').value.trim();
       let gender = document.getElementById('genderMale').checked ? "Male" : "Female";
       let comments = document.getElementById('comments').value.trim();
-      let consent = document.getElementById('consent').value;
+      let consent = document.getElementById('consent').checked;
       let id = Math.floor(100000 + Math.random() * 900000);
+
+      console.log("consent: ", consent);
+      if(firstName == "" || firstName == null || !validateString(firstName)){
+        alert("Please enter valid value for first name!");
+        return;
+      } else if(lastName == "" || lastName == null || !validateString(lastName)){
+        alert("Please enter valid value for last name!");
+        return;
+      } else if(birthday == "" || birthday == null){
+        alert("Please enter valid value for date of birth!");
+        return;
+      } else if(email == "" || email == null || !validateEmail(email)){
+        alert("Please enter valid value for email!");
+        return;
+      } else if(phone == "" || phone == null || !validatePhone(phone)){
+        alert("Please enter valid value for phone!");
+        return;
+      } else if(pUrl == "" || pUrl == null){
+        alert("Please enter valid value for Personal URL!");
+        return;
+      } else if(psw == "" || psw == null || !validatePassword(psw)){
+        alert("Please enter valid value for password!");
+        return;
+      } else if( cpsw != psw){
+        alert("Password and Confirm password does not match!");
+        return;
+      }
+    //   else if(comments == "" || comments == null){
+    //     alert("Please enter valid value for comments!");
+    //     return;
+    //   } 
+      else if(!consent){
+        alert("Please provide your consent!");
+        return;
+      }
 
       let user = {
        id,
        firstName,
        lastName,
-       yearOfBirth,
+       birthday,
        email,
        phone,
+       pUrl,
        psw,
        gender,
        comments,
-       consent
+       consent,
+       timestamp : Date.now()
       };
   
       let transaction = createTransaction('userStore', 'readwrite');
@@ -111,6 +144,22 @@ const IDB = (function init() {
     function clearForm(ev) {
       if (ev) ev.preventDefault();
       document.registrationForm.reset();
+    }
+
+    function validateString(string){
+        return nameRegex.test(string);
+    }
+
+    function validateEmail(email) {
+        return emailRegex.test(String(email).toLowerCase());
+    }
+
+    function validatePhone(phone) {
+        return phoneRegex.test(phone);
+    }
+
+    function validatePassword(password) {
+        return passwordRegex.test(password);
     }
 
   })();

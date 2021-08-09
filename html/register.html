@@ -38,14 +38,16 @@
           <p>Please fill in this form to create an account.</p>
           <hr>
           <label for="firstName"><b>First Name</b></label>
-          <input type="text" name="firstName" id="firstName" required>
+          <input type="text" name="firstName" id="firstName" pattern="[A-Za-z]{1,5}" required>
 
           <label for="lastName"><b>Last Name</b></label>
           <input type="text" name="lastName" id="lastName" required>
 
-          <label for="yearOfBirth"><b>Year of Birth</b></label>
-          <input type="text" name="yearOfBirth" id="yearOfBirth" required>
+          <!-- <label for="yearOfBirth"><b>Year of Birth</b></label>
+          <input type="text" name="yearOfBirth" id="yearOfBirth" required> -->
 
+          <label for="birthday"><b>Date of Birth</b></label><br>
+          <input type="date" id="birthday" name="birthday" required><br><br>
 
           <label for="email"><b>Email Address</b></label>
           <input type="email" name="email" id="email" required>
@@ -65,7 +67,7 @@
           <label for="gender"><b>Gender</b></label>
           <br>
          
-          <input type="radio" id="genderMale" name="gender" value="Male">
+          <input type="radio" id="genderMale" name="gender" value="Male" checked>
           <label class="radio" for="genderMale">Male</label>
          
           <input type="radio" id="genderFemale" name="gender" value="Female">
@@ -96,6 +98,7 @@
         <a href="mailto:fitnessclub@club.net">fitnessclub@club.net</a> -->
     </footer>
 
+    <script src="../js/constant.js"></script>
     <script src="../js/register.controller.js"></script>
   </div>
 </body>
