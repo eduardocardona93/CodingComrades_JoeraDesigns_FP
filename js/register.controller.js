@@ -125,6 +125,8 @@ const IDB = (function init() {
         console.log('successfully added an object');
         //move on to the next request in the transaction or
         //commit the transaction
+
+        //location.replace("https://www.w3schools.com")
       };
       request.onerror = (err) => {
         console.log('error in request to add');
