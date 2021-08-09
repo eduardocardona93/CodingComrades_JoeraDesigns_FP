@@ -210,13 +210,22 @@ header h1{
 .dropdown_2:hover .dropdown-content {
     display: block;
 }
-/* -------------------------------------------Registration Login Form--------------------------------------------------- */
+/* -------------------------------------------Registration - Login Form--------------------------------------------------- */
 /* Headine Style*/
 form h1{
     text-align: center;
     color: #56819E;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
+}
+
+/* Labels inside form */
+
+form label{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+
 }
 
 /* Input text login and registration */
@@ -247,6 +256,16 @@ button[type=reset]{
 
 
 
+/* ---------------------------Forgot Password Form ----------------------------------*/
+
+#randomPassword{
+    color: green;
+    font-size: 1.4em;
+    font-weight: bold;
+   
+}
+
+/* ----------------------------------Media Query ---------------------------------------- */
   @media screen and (min-width: 481px) {
    
   

@@ -1,4 +1,4 @@
-const forgotController -(function init(){
+const forgotController = (function init(){
 
     let db = null;
     let objectStore = null;
@@ -71,7 +71,47 @@ const forgotController -(function init(){
 
     document.getElementById('btnForgotPassword').addEventListener('click',(ev) =>{
         ev.preventDefault();
+        console.log('forgot clicked')
+
+        var userExist = false;
+        var password = "";
+        let loginEmail = document.getElementById('email').value.trim();
+      
+        if(loginEmail == "" || loginEmail == null ){
+            alert("Please enter valid username!");
+            return;
+        }
+
+        for(var i=0; i<userList.length; i++){
+            if(userList[i].email == loginEmail){
+                userExist = true;
+                break;
+            }
+        }
+        if(!userExist){
+            alert("User does not exist!");
+            return;
+        } else {
+           document.getElementById('randomPassword').innerHTML="Your new Password is - "+ generateP();
+           document.forgotForm.reset();
+        }
 
     });
+
+    function generateP() {
+        var pass = '';
+        var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 
+                'abcdefghijklmnopqrstuvwxyz0123456789@#$';
+        
+        for (i = 1; i <= 8; i++) {
+            var char = Math.floor(Math.random()
+                        * str.length + 1);
+              
+            pass += str.charAt(char)
+        }
+         
+        return pass;
+    }
+
 
 })();
