@@ -10,6 +10,7 @@ header {
     border-radius: 0%;
     margin-bottom: 1em;
     border-bottom: 0.1em solid #000;
+    background-image: linear-gradient(to right, #000000,#434242,#000000);
 }
 
 footer {
