@@ -10,13 +10,15 @@ header {
     border-radius: 0%;
     margin-bottom: 1em;
     border-bottom: 0.1em solid #000;
-    background-image: linear-gradient(to right, #000000,#434242,#000000);
+    background-image: linear-gradient(to right, #000000,#000000, #434242,#000000, #000000);
 }
 
 footer {
     font-size: 0.7em;
     text-align: center;
     margin-top: 2em;
+    clear: left;
+    background-image: linear-gradient(to right, #000000,#000000, #232222,#000000,#000000);
 }
 
 .mobile{
@@ -62,10 +64,6 @@ body{
     margin-right: 10%;
     height: 400px;
 }
-
-footer{
-    clear: left;
-}
  
 #method{
     width: 100%;
@@ -79,6 +77,46 @@ footer{
  #subject{
      height: 12em;
  }
+
+ input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+ }
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+    padding-top: 2em;
+}
+
+footer ul li{
+    display:  inline-block;
+    width: 20%;
+    padding-left: 1em;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+}
+
+.contact {
+    padding-bottom: 1.2em;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 1.5em;
+}
+
+.connect{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
  /* sumit desai css */
 
