@@ -6,51 +6,79 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joera Designs</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/index/styles.css" />
 </head>
 
 <body>
   <div id="container">
     <!-- this area is for the logo -->
     <header>
-      <a href="index.html"><img src="../src/joera_1.png" alt="Joera Designs Logo" title="Joera Designs" /></a>
+      <a href="index.html"><img src="../src/joera_1.png" alt="Joera"></a>
+      <h1>JOERA</h1>
     </header>
-
-    <!-- this area is for the hyperlinks to other pages -->
-    <div class="navbar">
-      
-      <a href="index.html">Home</a>
-      <a href="newcollection.html">New Collection</a>
-      <a href="shop.html">SHOP</a>
-      <a href="aboutus.html">What is Joera?</a>
-      <a href="instagram.html">Instagram</a>
-      <div class="dropdown">
-        <button class="dropbtn">Account
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content_log">
+    <!-- Menu for Mobile  -->
+   
+    <div class="mobile">
+       <!-- The overlay -->
+      <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="index.html">Home</a>
+          <a href="newcollection.html">New Collection</a>
+          <a href="shop.html">shop</a>
           <a href="login.html">Login</a>
           <a href="register.html">Register</a>
+          <a href="aboutus.html">What is Joera?</a>
+          <a href="instagram.html">Instagram</a>
+          <a href="contact.html">Contact Us</a>
+          <a href="storepolicy.html">Store Policy</a>
+          <a href="faq.html">FAQs</a>
         </div>
       </div>
-      <div class="dropdown_2">
-        <button class="dropbtn">More
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-      <a href="contact.html">Contact Us</a>
-      <a href="storepolicy.html">Store Policy</a>
-      <a href="faq.html">FAQs</a>
+
+      <!-- Use any element to open/show the overlay navigation menu -->
+      <span onclick="openNav()"><img src="../src/side_menu.png" width="30px" height="35px"></span>
+    </div>
+    <!-- Navigation Menu for Dsktop  -->
+  
+    <div class="desktop">
+        <!-- this area is for the hyperlinks to other pages -->
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="newcollection.html">New Collection</a>
+        <a href="shop.html">SHOP</a>
+        <a href="aboutus.html">What is Joera?</a>
+        <a href="instagram.html">Instagram</a>
+        <div class="dropdown">
+          <button class="dropbtn">Account
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content_log">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+          </div>
         </div>
+
+        <div class="dropdown_2">
+          <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="contact.html">Contact Us</a>
+            <a href="storepolicy.html">Store Policy</a>
+            <a href="faq.html">FAQs</a>
+          </div>
+        </div>
+
       </div>
-    
-  </div>
+    </div>
 
     <!-- main content of the website -->
     <main>
-      <form>
-
-        <div class="container">
+      <div class="container">
+      <form>     
           <label for="uname"><b>Username</b></label>
           <input type="text" name="uname" id="uname" required>
 
@@ -58,19 +86,17 @@
           <input type="password" name="psw" id="psw" required>
 
           <button id="btnLogin" type="submit">Login</button>
-          <a href="#">Forgot password?</a>
+          <a href="../html/forgot_password.html">Forgot password?</a>
         </div>
-
-
       </form>
-
+    </div>
 
     </main>
 
     <!-- footer of the webpage -->
     <footer>
-      <!-- &copy; Copyright 2020. All Rights reserved. <br />
-        <a href="mailto:fitnessclub@club.net">fitnessclub@club.net</a> -->
+      &copy; Copyright 2021. All Rights reserved. <br />
+      <a href="mailto:dinamol4141@gmail.com">mailto:dinamol4141@gmail.com</a>
     </footer>
 
     <script src="../js/login.controller.js"></script>
