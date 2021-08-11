@@ -82,7 +82,23 @@ input[type=radio]{
   box-sizing: border-box;
 }
 
+.contactForm h1, .contactForm p{
+  text-align: center;
+}
 
+.formLeft{
+  float: left;
+  margin-left: 3em;
+}
+
+#method{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
 /* Media Query for the tablet view port targets screen only */
 /* minimum width is 481px */

@@ -31,10 +31,61 @@ header h1{
     margin-bottom: .4em;
 }
 
+ /* sumit desai css */
 body{
     background-color: #D3D3D3;
 }
 
+.titleContact{
+    text-align: center;
+}
+
+.titleContact hr{
+    margin-top: 2em;
+}
+
+.contactForm{
+    width: 35%;
+    margin-left: 5%;
+    margin-right: 10%;
+    float: left;
+}
+
+.formFields{
+    margin-top: 2em;
+    margin-left: -8em;
+}
+
+#googleMap{
+    width:40%;
+    margin-top: 3em;
+    margin-right: 10%;
+    height: 400px;
+}
+
+footer{
+    clear: left;
+}
+ 
+#method{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+ }
+
+ #subject{
+     height: 12em;
+ }
+
+ /* sumit desai css */
+
+
+/* .firstLabel input[type=text]{
+    width: 5em;
+}  */
 
 /* ---------------------Side Nvigation Menu bar for Mobile --------------------------- */
 /* The Overlay (background) */
