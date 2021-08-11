@@ -30,6 +30,10 @@ header h1{
     margin-bottom: .4em;
 }
 
+body{
+    background-color: #D3D3D3;
+}
+
 
 /* ---------------------Side Nvigation Menu bar for Mobile --------------------------- */
 /* The Overlay (background) */

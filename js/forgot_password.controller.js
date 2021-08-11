@@ -3,6 +3,8 @@ const forgotController = (function init(){
     let db = null;
     let objectStore = null;
     let DBOpenReq = indexedDB.open('JoeraDB', 3);
+    var user = {};
+    var password = "";
     DBOpenReq.addEventListener('error', (err) => {
         //Error occurred while trying to open DB
         console.warn(err);
@@ -85,14 +87,34 @@ const forgotController = (function init(){
         for(var i=0; i<userList.length; i++){
             if(userList[i].email == loginEmail){
                 userExist = true;
+                user = userList[i];
                 break;
             }
         }
+
         if(!userExist){
             alert("User does not exist!");
             return;
         } else {
-           document.getElementById('randomPassword').innerHTML="Your new Password is - "+ generateP();
+
+            let transaction = createTransaction('userStore', 'readwrite');
+            transaction.oncomplete = (ev) => {
+            //transaction for reading all objects is complete
+            };
+            
+            user.psw = generateP();
+
+            let store = transaction.objectStore('userStore');
+            let getReq = store.put(user); //key or keyrange optional
+        
+            getReq.onsuccess = (ev) => {
+               console.log("password updated user: ", user);
+            };
+             getReq.onerror = (err) => {
+               console.warn(err);
+            };
+
+           document.getElementById('randomPassword').innerHTML="Your new Password is - "+ user.psw;
            document.forgotForm.reset();
         }
 
