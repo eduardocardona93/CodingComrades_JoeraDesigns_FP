@@ -76,51 +76,57 @@
     </div>
     <!-- main content of the website -->
     <main>
-      <div class="contactForm">
-        <div class="titleContact">
-          <h1>Send us a message</h1>
-          <p>Please complete the quick form below. We will get back to you soon.</p>
-          <hr>
+      <div class="container">
+        <div class="contactForm">
+          <div class="titleContact">
+            <h1>SEND US A MESSSAGE</h1>
+            <p>Please complete the quick form below. We will get back to you soon.</p>
+            <hr>
+          </div>
+          <div class="formFields">
+            <form onsubmit="dataSave()" >
+              
+              <label for="fname" >First Name</label><br>
+              <input type="text" id="fname" name="firstname" placeholder="First name" required>
+            
+              <label for="lname" >Last Name</label><br>
+              <input type="text" id="lname" name="lastname" placeholder="Last name" required>
+              
+              <label for="email" >Email</label><br>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            
+              <label for="phone" >Phone</label><br>
+              <input type="text" id="phone" name="phone" placeholder="Phone" required>
+              
+              <label for="method" >Preferred method of contact</label><br>
+              <select id="method" name="method" required>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+              </select>
+    
+              <label for="subject" >Subject</label><br>
+              <textarea id="subject" name="subject" placeholder="Write your query" required></textarea><br><br>
+          
+              <input type="submit" value="Submit" class="btnSubmit">
+            </form>
+          </div>
         </div>
-        <div class="formFields">
-          <form onsubmit="dataSave()" >
-            
-            <label for="fname" >First Name</label><br>
-            <input type="text" id="fname" name="firstname" placeholder="First name" required>
-          
-            <label for="lname" >Last Name</label><br>
-            <input type="text" id="lname" name="lastname" placeholder="Last name" required>
-            
-            <label for="email" >Email</label><br>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-          
-            <label for="phone" >Phone</label><br>
-            <input type="text" id="phone" name="phone" placeholder="Phone" required>
-            
-            <label for="method" >Preferred method of contact</label><br>
-            <select id="method" name="method" required>
-              <option value="email">Email</option>
-              <option value="phone">Phone</option>
-            </select>
-  
-            <label for="subject" >Subject</label><br>
-            <textarea id="subject" name="subject" placeholder="Write your query" required></textarea><br><br>
         
-            <input type="submit" value="Submit" class="btnSubmit">
-          </form>
-        </div>
-      </div>
-      
-      <div class="maps">
-        <h1>Contact information</h1>
-        <strong>City</strong><br>
-        Toronto, Canada<br><br>
-        <strong>Email</strong><br>
-        help@joera.com<br><br>
-        <strong>Call</strong><br>
-        +1(647)748-4819<br><br>
-        <strong>Location</strong>
-        <div id="googleMap">
+        <div class="maps">
+          <div class="titleContact">
+            <h1>CONTACT INFORMATION</h1>
+            <p>If the form is not your thing, get connect with as from below</p>
+            <hr>
+          </div>
+          <strong>City</strong><br>
+          Toronto, Canada<br><br>
+          <strong>Email</strong><br>
+          help@joera.com<br><br>
+          <strong>Call</strong><br>
+          +1(647)748-4819<br><br>
+          <strong>Location</strong>
+          <div id="googleMap">
+          </div>
         </div>
       </div>
 
