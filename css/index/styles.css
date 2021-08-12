@@ -147,8 +147,38 @@ footer ul li{
     margin-right:10%;
 }
 
+.greeting{
+  text-align: center;
+  font-family: 'Open Sans', sans-serif !important;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+  margin-top: 4em;
+} 
+
+.greeting h1{
+    color: #56819E;
+}
+
+.greeting p{
+    margin-bottom: 2em;
+}
+
+.greeting video{
+    margin-top: -2.5em;
+}
 
 
+/* .greeting {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4em;
+  width: 65%;
+  float: right;
+  margin-top: 4em;
+  font-family: 'Open Sans', sans-serif !important;
+}  */
 
 /* .firstLabel input[type=text]{
     width: 5em;

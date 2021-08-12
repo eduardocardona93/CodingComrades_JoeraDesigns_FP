@@ -31,7 +31,7 @@
           <a href="login.html">Login</a>
           <a href="register.html">Register</a>
           <a href="aboutus.html">What is Joera?</a>
-        
+         
           <a href="contact.html">Contact Us</a>
           <a href="storepolicy.html">Store Policy</a>
           <a href="faq.html">FAQs</a>
@@ -74,62 +74,19 @@
 
       </div>
     </div>
+
     <!-- main content of the website -->
     <main>
-      <div class="container">
-        <div class="contactForm">
-          <div class="titleContact">
-            <h1>SEND US A MESSSAGE</h1>
-            <p>Please complete the quick form below. We will get back to you soon.</p>
-            <hr>
-          </div>
-          <div class="formFields">
-            <form>
-              
-              <label for="fname" >First Name</label><br>
-              <input type="text" id="fname" name="firstname" placeholder="First name" class="inputText" required>
-            
-              <label for="lname" >Last Name</label><br>
-              <input type="text" id="lname" name="lastname" placeholder="Last name" class="inputText" required>
-              
-              <label for="email" >Email</label><br>
-              <input type="email" id="email" name="email" placeholder="Email" class="inputText" required>
-            
-              <label for="phone" >Phone</label><br>
-              <input type="text" id="phone" name="phone" placeholder="Phone" class="inputText" required>
-              
-              <label for="method" >Preferred method of contact</label><br>
-              <select id="method" name="method" required>
-                <option value="email">Email</option>
-                <option value="phone">Phone</option>
-              </select>
-    
-              <label for="subject" >Subject</label><br>
-              <textarea id="subject" name="subject" placeholder="Write your query" class="inputText" required></textarea><br><br>
-          
-              <input id="btnSubmit" type="submit" value="Submit" class="btnSubmit">
-            </form>
-          </div>
+        <div class="container">
+            <div class="greeting">
+                <h1>Thank you!</h1>
+                <p>We will try to get back to you at our earliest! Meanwhile, please feel free to use our website</p>
+                <hr>
+                <video width="800" height="600" controls>
+                    <source src="../video/thank_you.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
-        
-        <div class="maps">
-          <div class="titleContact">
-            <h1>CONTACT INFORMATION</h1>
-            <p>If the form is not your thing, Don't worry, get connect with as from any of the below options.</p>
-            <hr>
-          </div>
-          <strong>City</strong><br>
-          Toronto, Canada<br><br>
-          <strong>Email</strong><br>
-          help@joera.com<br><br>
-          <strong>Call</strong><br>
-          +1(647)748-4819<br><br>
-          <strong>Location</strong>
-          <div id="googleMap">
-          </div>
-        </div>
-      </div>
-
     </main>
 
     <!-- footer of the webpage -->
@@ -170,23 +127,7 @@
            <p>&copy; Copyright 2021. All Rights Reserved.</p>
        </div>
    </footer>
-
   </div>
-  <script>
-      function myMap() {
-      var mapProp= {
-          center:new google.maps.LatLng(43.6532,-79.3832),
-          zoom:5,
-      };
-
-      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-      var marker = new google.maps.Marker({position: new google.maps.LatLng(43.6532,-79.3832)});
-      marker.setMap(map);
-      }
-  </script>
-  <script src="../js/contact.controller.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTHJPti-Qb7yct1ocqUx8LMlOXFtC82c&callback=myMap"></script>
 </body>
 
 </html>
