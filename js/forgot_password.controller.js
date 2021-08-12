@@ -70,7 +70,6 @@ const forgotController = (function init(){
         return transaction;
     }
 
-
     document.getElementById('btnForgotPassword').addEventListener('click',(ev) =>{
         ev.preventDefault();
         console.log('forgot clicked')

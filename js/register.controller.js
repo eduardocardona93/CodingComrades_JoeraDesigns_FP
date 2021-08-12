@@ -68,7 +68,6 @@ const IDB = (function init() {
   }
 
 
-  
   document.getElementById('btnSignUp').addEventListener('click', (ev) => {
     ev.preventDefault();
     //one of the form buttons was clicked

@@ -45,6 +45,7 @@ const loginController = (function init() {
     objectStore.createIndex('emailIDX', 'email', { unique: false });
     });
 
+   
     function fetchUserStore(){
         //use getAll to get an array of objects from our store
         let transaction = createTransaction('userStore', 'readonly');
