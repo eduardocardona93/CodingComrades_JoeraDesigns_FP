@@ -165,20 +165,9 @@ footer ul li{
     margin-bottom: 2em;
 }
 
-.greeting video{
-    margin-top: -2.5em;
+#btnSubmit{
+    margin-bottom: 2em;
 }
-
-
-/* .greeting {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4em;
-  width: 65%;
-  float: right;
-  margin-top: 4em;
-  font-family: 'Open Sans', sans-serif !important;
-}  */
 
 /* .firstLabel input[type=text]{
     width: 5em;
