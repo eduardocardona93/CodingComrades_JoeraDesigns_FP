@@ -107,7 +107,7 @@
               <label for="subject" >Subject</label><br>
               <textarea id="subject" name="subject" placeholder="Write your query" class="inputText" required></textarea><br><br>
           
-              <input type="submit" value="Submit" class="btnSubmit">
+              <input id="btnSubmit" type="submit" value="Submit" class="btnSubmit">
             </form>
           </div>
         </div>
@@ -173,22 +173,20 @@
 
   </div>
   <script>
-    
-    function myMap() {
+      function myMap() {
       var mapProp= {
-        center:new google.maps.LatLng(43.6532,-79.3832),
-        zoom:5,
+          center:new google.maps.LatLng(43.6532,-79.3832),
+          zoom:5,
       };
-    
+
       var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
       var marker = new google.maps.Marker({position: new google.maps.LatLng(43.6532,-79.3832)});
       marker.setMap(map);
-    }
-    
-    </script>
-    
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTHJPti-Qb7yct1ocqUx8LMlOXFtC82c&callback=myMap"></script>
+      }
+  </script>
+  <script src="../js/contact.controller.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTHJPti-Qb7yct1ocqUx8LMlOXFtC82c&callback=myMap"></script>
 </body>
 
 </html>

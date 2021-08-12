@@ -104,7 +104,6 @@ const loginController = (function init() {
         for(var i=0; i<userList.length; i++){
             if(userList[i].email == loginEmail){
                 userExist = true;
-                user = user
                 password = userList[i].psw;
                 break;
             }
