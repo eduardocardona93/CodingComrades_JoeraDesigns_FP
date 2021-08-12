@@ -1,5 +1,7 @@
 const loginController = (function init() {
-   
+    if(localStorage && localStorage.currentUser){
+        location.href="index.html";
+    }
     let db = null;
     let objectStore = null;
     let DBOpenReq = indexedDB.open('JoeraDB', 4);
@@ -109,6 +111,7 @@ const loginController = (function init() {
                     userExist = true;
                     currentUser = userList[i];
                     console.log("current user login success: ",  currentUser);
+                    localStorage.currentUser = currentUser;
                     password = userList[i].psw;
                     break;
                 }
