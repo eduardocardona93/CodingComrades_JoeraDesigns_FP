@@ -1,5 +1,5 @@
 const loginController = (function init() {
-    if(localStorage && localStorage.currentUser){
+    if(localStorage && localStorage.getItem('currentUser')){
         location.href="index.html";
     }
     let db = null;
@@ -111,7 +111,7 @@ const loginController = (function init() {
                     userExist = true;
                     currentUser = userList[i];
                     console.log("current user login success: ",  currentUser);
-                    localStorage.currentUser = currentUser;
+                    localStorage.setItem('currentUser', currentUser);
                     password = userList[i].psw;
                     break;
                 }
