@@ -71,6 +71,8 @@ const contactController = (function init(){
       return;
     }
 
+    console.log();
+
     let message = {
       mid,
       firstName,

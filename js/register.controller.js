@@ -2,7 +2,7 @@ const IDB = (function init() {
 
   let db = null;
   let objectStore = null;
-  let DBOpenReq = indexedDB.open('JoeraDB', 3);
+  let DBOpenReq = indexedDB.open('JoeraDB', 4);
 
   //REGEX
   let nameRegex = /^[a-zA-Z ]+$/;
@@ -140,6 +140,7 @@ const IDB = (function init() {
     transaction.oncomplete = (ev) => {
       //console.log(ev);
       clearForm();
+      location.href = "login.html"
     };
 
     let store = transaction.objectStore('userStore');
