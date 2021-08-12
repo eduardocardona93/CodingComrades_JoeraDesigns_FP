@@ -561,6 +561,23 @@ button[type=reset]{
    
 }
 
+
+/* ----------------------------FAQ------------------------------------------- */
+
+
+#faqDiv{
+    padding: 1em;
+}
+
+#faqDiv summary{
+    
+    font-size: 1em;
+
+}
+#faqDiv :p{ 
+    font-size: .5em;
+    
+}
 /* ----------------------------------Media Query ---------------------------------------- */
   @media screen and (min-width: 481px) {
    
