@@ -35,7 +35,9 @@ header h1{
 
  /* sumit desai css */
 body{
+    
     background-color: #D3D3D3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .titleContact{
@@ -145,7 +147,7 @@ footer ul li{
     margin-right:10%;
 }
 
- /* sumit desai css */
+
 
 
 /* .firstLabel input[type=text]{
@@ -375,6 +377,10 @@ button[type=reset]{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+
+/* Upload Image */
+
+
 /* -------------------about us----------------------------------- */
 
 .about-us-div{
@@ -502,10 +508,10 @@ button[type=reset]{
 #searchBar{
     padding: .6em;
     margin-top: 2em;
-    width: 100%;
- 
+
     font-size: 1em;
 }
+
 .feature-heading{
     display: flex;
     justify-content: center;

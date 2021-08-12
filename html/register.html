@@ -17,9 +17,9 @@
       <h1>JOERA</h1>
     </header>
     <!-- Menu for Mobile  -->
-   
+
     <div class="mobile">
-       <!-- The overlay -->
+      <!-- The overlay -->
       <div id="myNav" class="overlay">
         <!-- Button to close the overlay navigation -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -31,7 +31,7 @@
           <a href="login.html">Login</a>
           <a href="register.html">Register</a>
           <a href="aboutus.html">What is Joera?</a>
-        
+
           <a href="contact.html">Contact Us</a>
           <a href="storepolicy.html">Store Policy</a>
           <a href="faq.html">FAQs</a>
@@ -42,15 +42,15 @@
       <span onclick="openNav()"><img src="../src/side_menu.png" width="30px" height="35px"></span>
     </div>
     <!-- Navigation Menu for Dsktop  -->
-  
+
     <div class="desktop">
-        <!-- this area is for the hyperlinks to other pages -->
+      <!-- this area is for the hyperlinks to other pages -->
       <div class="navbar">
         <a href="index.html">Home</a>
         <a href="newcollection.html">New Collection</a>
         <a href="shop.html">shop</a>
         <a href="aboutus.html">What is Joera?</a>
-      
+
         <div class="dropdown">
           <button class="dropbtn">Account
             <i class="fa fa-caret-down"></i>
@@ -77,108 +77,114 @@
     <!-- main content of the website -->
     <main>
       <div class="container"></div>
-        <form name="registrationForm">
+     
+      <form name="registrationForm">
+
+        <h1>SIGN UP</h1>
+        <label><b>Upload Profile Image</b></label>
+        <input type="file" id="filetag">
         
-          <h1>SIGN UP</h1>
-         
-         
-          <label for="firstName"><b>First Name</b></label>
-          <input type="text" name="firstName" id="firstName" class="inputText"  pattern="[A-Za-z]{1,5}" required>
+        <img src="" id="preview" style="margin-top: 2em;">
+        <br>
+        <br>
+        <label for="firstName"><b>First Name</b></label>
+        <input type="text" name="firstName" id="firstName" class="inputText" pattern="[A-Za-z]{1,5}" required>
 
-          <label for="lastName"><b>Last Name</b></label>
-          <input type="text" name="lastName" id="lastName" class="inputText"  required>
+        <label for="lastName"><b>Last Name</b></label>
+        <input type="text" name="lastName" id="lastName" class="inputText" required>
 
-          <!-- <label for="yearOfBirth"><b>Year of Birth</b></label>
+        <!-- <label for="yearOfBirth"><b>Year of Birth</b></label>
           <input type="text" name="yearOfBirth" id="yearOfBirth" required> -->
 
-          <label for="birthday"><b>Date of Birth</b></label><br>
-          <input type="date" id="birthday" name="birthday" class="inputText"  required><br><br>
+        <label for="birthday"><b>Date of Birth</b></label><br>
+        <input type="date" id="birthday" name="birthday" class="inputText" required><br><br>
 
-          <label for="email"><b>Email Address</b></label>
-          <input type="email" name="email" id="email" class="inputText"  required>
+        <label for="email"><b>Email Address</b></label>
+        <input type="email" name="email" id="email" class="inputText" required>
 
-          <label for="phone"><b>Phone Number</b></label>
-          <input type="tel" name="phone" id="phone" class="inputText"  required>
+        <label for="phone"><b>Phone Number</b></label>
+        <input type="tel" name="phone" id="phone" class="inputText" required>
 
-          <label for="pUrl"><b>Personal URL</b></label>
-          <input type="url" name="pUrl" id="pUrl" class="inputText"  required>
+        <label for="pUrl"><b>Personal URL</b></label>
+        <input type="url" name="pUrl" id="pUrl" class="inputText" required>
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" name="psw" id="psw" required>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" name="psw" " class=" inputText" id="psw" required>
 
-          <label for="confirmPassword"><b>Confirm Password</b></label>
-          <input type="password" name="confirmPassword" id="confirmPassword" class="inputText"  required>
+        <label for="confirmPassword"><b>Confirm Password</b></label>
+        <input type="password" name="confirmPassword" id="confirmPassword" class="inputText" required>
 
-          <label for="gender"><b>Gender</b></label>
-          <br>
-         
-          <input type="radio" id="genderMale" name="gender" value="Male" checked>
-          <label class="radio" for="genderMale">Male</label>
-         
-          <input type="radio" id="genderFemale" name="gender" value="Female">
-          <label class="radio" for="genderFemale">female</label>
-          <br>
+        <label for="gender"><b>Gender</b></label>
+        <br>
 
-          <label for="comments"><b>Comments</b></label>
-          <textarea name="comments" id="comments" class="inputText"  rows="3" cols="25"></textarea>
+        <input type="radio" id="genderMale" name="gender" value="Male" checked>
+        <label class="radio" for="genderMale">Male</label>
 
-          <br>
-          <label>
-            <input id="consent" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Information provided is
-            true and correct
-          </label>
+        <input type="radio" id="genderFemale" name="gender" value="Female">
+        <label class="radio" for="genderFemale">female</label>
+        <br>
+
+        <label for="comments"><b>Comments</b></label>
+        <textarea name="comments" id="comments" class="inputText" rows="3" cols="25"></textarea>
+
+        <br>
+        <label>
+          <input id="consent" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Information
+          provided is
+          true and correct
+        </label>
 
 
-          <div class="clearfix">
-            <button id="btnClearAll" type="reset" class="clearbtn">Clear All</button>
-            <button id="btnSignUp" type="submit" class="signupbtn">Sign Up</button>
-          </div>
-       
-        </form>
-      </div>
-    </main>
+        <div class="clearfix">
+          <button id="btnClearAll" type="reset" class="clearbtn">Clear All</button>
+          <button id="btnSignUp" type="submit" class="signupbtn">Sign Up</button>
+        </div>
 
-    <!-- footer of the webpage -->
-    <footer>
-      <!-- &#169; copyright symbol html entity number -->
+      </form>
+  </div>
+  </main>
 
-       <div class="contact">
-           <div class="connect">
-              <p class="footerConnect">Connect with us on</p>
-                  <ul>
-                      <li>
-                          <a href="https://twitter.com/iamsmt555" target="_blank">
-                              <img src="../src/twitter1.png" width="25" height="25">
-                              Twitter
-                          </a>
-                      </li>
-                      <li>
-                          <a href="https://www.linkedin.com/in/sumit-desai-964b35101/" target="_blank">
-                              <img src="../src/linkedin1.png"  width="25" height="25">
-                              Linkedin
-                          </a>
-                      </li>
-                      <li>
-                          <a href="mailto:sumitdesai1997@gmail.com" target="_blank">
-                              <img src="../src/email1.png"  width="25" height="25">
-                              Email
-                          </a>
-                      </li>
-                      <!-- <li>
+  <!-- footer of the webpage -->
+  <footer>
+    <!-- &#169; copyright symbol html entity number -->
+
+    <div class="contact">
+      <div class="connect">
+        <p class="footerConnect">Connect with us on</p>
+        <ul>
+          <li>
+            <a href="https://twitter.com/iamsmt555" target="_blank">
+              <img src="../src/twitter1.png" width="25" height="25">
+              Twitter
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/sumit-desai-964b35101/" target="_blank">
+              <img src="../src/linkedin1.png" width="25" height="25">
+              Linkedin
+            </a>
+          </li>
+          <li>
+            <a href="mailto:sumitdesai1997@gmail.com" target="_blank">
+              <img src="../src/email1.png" width="25" height="25">
+              Email
+            </a>
+          </li>
+          <!-- <li>
                           <a href="https://www.instagram.com/iamsmt555/" target="_blank">
                               <img src="../src/instagram1.png"  width="25" height="25">
                               Instagram
                           </a>
                       </li> -->
-                  </ul>
-              <hr>
-           </div>
-           <p>&copy; Copyright 2021. All Rights Reserved.</p>
-       </div>
-   </footer>
+        </ul>
+        <hr>
+      </div>
+      <p>&copy; Copyright 2021. All Rights Reserved.</p>
+    </div>
+  </footer>
 
-   
-    <script src="../js/register.controller.js"></script>
+
+  <script src="../js/register.controller.js"></script>
   </div>
 </body>
 
