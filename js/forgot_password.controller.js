@@ -2,7 +2,7 @@ const forgotController = (function init(){
 
     let db = null;
     let objectStore = null;
-    let DBOpenReq = indexedDB.open('JoeraDB', 3);
+    let DBOpenReq = indexedDB.open('JoeraDB', 4);
     var user = {};
     var password = "";
     DBOpenReq.addEventListener('error', (err) => {

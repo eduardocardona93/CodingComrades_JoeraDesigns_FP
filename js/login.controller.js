@@ -2,12 +2,13 @@ const loginController = (function init() {
    
     let db = null;
     let objectStore = null;
-    let DBOpenReq = indexedDB.open('JoeraDB', 3);
+    let DBOpenReq = indexedDB.open('JoeraDB', 4);
 
     //REGEX
     let emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     var userList = [];
+    var currentUser = {};
 
     DBOpenReq.addEventListener('error', (err) => {
         //Error occurred while trying to open DB
@@ -86,43 +87,47 @@ const loginController = (function init() {
         return transaction;
     }
 
-    document.getElementById('btnLogin').addEventListener('click', (ev) => {
-        ev.preventDefault();
-
-        console.log("Login clicked");
-        console.log("userlist: ", userList);
-        var userExist = false;
-        var password = "";
-        let loginEmail = document.getElementById('uname').value.trim();
-        let loginPassword = document.getElementById('psw').value.trim();
-
-        if(loginEmail == "" || loginEmail == null || !validateEmail(loginEmail)){
-            alert("Please enter valid username!");
-            return;
-        }
-
-        for(var i=0; i<userList.length; i++){
-            if(userList[i].email == loginEmail){
-                userExist = true;
-                password = userList[i].psw;
-                break;
+    var btnLogin = document.getElementById('btnLogin');
+    if(btnLogin != null){
+        document.getElementById('btnLogin').addEventListener('click', (ev) => {
+            ev.preventDefault();
+    
+            console.log("Login clicked");
+            console.log("userlist: ", userList);
+            var userExist = false;
+            var password = "";
+            let loginEmail = document.getElementById('uname').value.trim();
+            let loginPassword = document.getElementById('psw').value.trim();
+    
+            if(loginEmail == "" || loginEmail == null || !validateEmail(loginEmail)){
+                alert("Please enter valid username!");
+                return;
             }
-        }
-
-        if(!userExist){
-            alert("User does not exist!");
-            return;
-        } else {
-            if(password != loginPassword){
-                alert("Please enter correct password!");
+    
+            for(var i=0; i<userList.length; i++){
+                if(userList[i].email == loginEmail){
+                    userExist = true;
+                    currentUser = userList[i];
+                    console.log("current user login success: ",  currentUser);
+                    password = userList[i].psw;
+                    break;
+                }
+            }
+    
+            if(!userExist){
+                alert("User does not exist!");
                 return;
             } else {
-                alert("Password is correct!");
-                return;
+                if(password != loginPassword){
+                    alert("Please enter correct password!");
+                    return;
+                } else {
+                    location.href="index.html";
+                }
             }
-        }
-
-    });
+    
+        });
+    }
 
     function validateEmail(email) {
         return emailRegex.test(String(email).toLowerCase());
