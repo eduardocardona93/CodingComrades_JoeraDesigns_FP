@@ -10,7 +10,7 @@ header {
     border-radius: 0%;
     margin-bottom: 1em;
     border-bottom: 0.1em solid #000;
-    background-image: linear-gradient(to right, #000000,#000000, #434242,#000000, #000000);
+    background-image: linear-gradient(to right, #000000,#1f1e1e, #434242,#1f1e1e, #000000);
 }
 
 footer {
@@ -18,7 +18,7 @@ footer {
     text-align: center;
     margin-top: 2em;
     clear: left;
-    background-image: linear-gradient(to right, #000000,#000000, #232222,#000000,#000000);
+    background-image: linear-gradient(to right, #000000,#1f1e1e, #232222,#1f1e1e,#000000);
 }
 
 .mobile{
@@ -350,7 +350,7 @@ form label{
 }
 
 /* Input text login and registration */
-input[type=text], input[type=password] , input[type=email], input[type=tel], input[type=url], textarea{
+.inputText{
     width: 100%;
     padding: 0.8em 0.8em;
     margin: 0.8em 0;
@@ -375,7 +375,182 @@ button[type=reset]{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* -------------------about us----------------------------------- */
 
+.about-us-div{
+   padding: 1em;
+        /* -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-width: 20em;
+        -moz-column-width: 20em;
+        column-width: 20em; */
+    text-align: ju;
+    
+}
+
+
+/* ---------------------------Home- page --------------------------------- */
+/* Slider */
+
+  
+.full-slider-box{
+    width:100%;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.f-slide-1{
+    background-image: url(../images/Slider_01.jpg);
+}
+.f-slide-2{
+    background-image: url(../images/Slider_02.jpg);
+}
+.f-slide-3{
+    background-image: url(../images/Slider_03.jpg);
+}
+.slider-text-container{
+    width:80%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+.f-slider-text{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+.f-slider-text strong{
+    color: #333333;
+    font-size: 3rem;
+    line-height: 55px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+.f-slider-text span{
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 500;
+    color: #666666;
+    font-size: 1.2rem;
+}
+.f-slider-btn{
+    width:170px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #0b9d8a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 14px;
+}
+.f-slider-text strong font{
+    color: #0b9d8a;
+}
+/* Sale */
+.sale{
+    width:95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+  
+}
+.sale-box{
+    width:280px;
+    border-radius: 20px;
+    margin: 20px;
+    position: relative;
+    flex-grow: 0.5;
+}
+.sale-box img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center right;
+}
+.sale-text{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-20%,-50%);
+    display: flex;
+    flex-direction: column;
+}
+.sale-box a{
+    color: #1b1919;
+}
+.sale-text strong{
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 80%;
+    line-height: 23px;
+}
+
+
+
+
+/* -------------------------------Shop Page----------------------------- */
+/* search bar */
+#searchBar{
+    padding: .6em;
+    margin-top: 2em;
+    width: 100%;
+ 
+    font-size: 1em;
+}
+.feature-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feature-heading h2{
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #1b1919;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 40px;
+    padding: 5px 30px;
+    border: 1px solid #e0e0e0;
+}
+.feature-box{
+    width:155px;
+    height: 160px;
+    margin: 0px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.feature-box a img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.item span{
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 5px;
+    color: #444444;
+}
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#autoWidth{
+    display: flex;
+    justify-content: center !important;
+    margin: 10px auto 40px auto;
+}
 
 /* ---------------------------Forgot Password Form ----------------------------------*/
 
