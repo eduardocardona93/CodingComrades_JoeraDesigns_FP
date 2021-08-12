@@ -84,7 +84,8 @@ const contactController = (function init(){
 
     let transaction = createTransaction('messageStore', 'readwrite');
     transaction.oncomplete = (ev) => {
-      console.log(ev);
+      console.log('transaction completed successfully for contact form submit');
+      location.href="thankYou.html"
     };
 
     let store = transaction.objectStore('messageStore');
