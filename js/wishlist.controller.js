@@ -1,6 +1,3 @@
-if(!localStorage || !localStorage.getItem('currentUser')){
-    location.href="index.html";
-}
 
 let collectionList = document.getElementById('collectionList');
 let currentUser = JSON.parse(localStorage.getItem('currentUser'));
