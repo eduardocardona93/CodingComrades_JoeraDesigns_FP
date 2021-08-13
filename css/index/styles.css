@@ -732,6 +732,12 @@ button[type=reset]{
    padding: 0px;
 }
 
+.policy_para{
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+}
+
 /* ----------------------------------Media Query ---------------------------------------- */
   @media screen and (min-width: 481px) {
    
