@@ -1,7 +1,3 @@
-if (!localStorage || !localStorage.getItem('currentUser')) {
-    location.href = "index.html";
-}
-
 
 let collectionList = document.getElementById('collectionList');
 let currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -53,7 +49,7 @@ function fetchData(filterText) {
         cardItem.appendChild(imgItem);
         cardItem.appendChild(captionContainer);
 
-        if (!localStorage || !localStorage.getItem('currentUser')) {
+        if (localStorage && localStorage.getItem('currentUser')) {
             const wishListToggleBtn = document.createElement('button');
             wishListToggleBtn.setAttribute('data-prod-id', element.prodId);
             const currentPositionInWishList = currentWishList.indexOf(element.prodId);
