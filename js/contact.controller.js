@@ -5,7 +5,6 @@
   let phoneRegex = /^[0-9]{10}$/;
   let userData = {};
   function fetchData(){
-    
     if(localStorage && localStorage.getItem('currentUser')) {
       userData = JSON.parse(localStorage.getItem('currentUser'));
       document.getElementById('fname').value = userData.firstName;
