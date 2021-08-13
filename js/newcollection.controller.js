@@ -1,9 +1,7 @@
 
 let collectionList = document.getElementById('collectionList');
 let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-if (localStorage && localStorage.getItem('currentUser')) {
-    let currentWishList = currentUser['wishList'];
-}
+
 document.getElementById('searchButton').addEventListener('click', (ev) => {
     const searchInput = document.getElementById('searchBar');
     if (searchInput.value && searchInput.value != "") {
@@ -52,6 +50,7 @@ function fetchData(filterText) {
         cardItem.appendChild(captionContainer);
 
         if (localStorage && localStorage.getItem('currentUser')) {
+            let currentWishList = currentUser['wishList'];
             const wishListToggleBtn = document.createElement('button');
             wishListToggleBtn.setAttribute('data-prod-id', element.prodId);
             const currentPositionInWishList = currentWishList.indexOf(element.prodId);
