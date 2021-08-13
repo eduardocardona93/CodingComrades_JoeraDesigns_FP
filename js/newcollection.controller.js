@@ -1,8 +1,9 @@
 
 let collectionList = document.getElementById('collectionList');
 let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-let currentWishList = currentUser['wishList'];
-
+if (localStorage && localStorage.getItem('currentUser')) {
+    let currentWishList = currentUser['wishList'];
+}
 document.getElementById('searchButton').addEventListener('click', (ev) => {
     const searchInput = document.getElementById('searchBar');
     if (searchInput.value && searchInput.value != "") {
