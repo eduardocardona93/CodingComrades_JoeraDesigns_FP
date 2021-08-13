@@ -208,6 +208,24 @@ footer ul li{
     font-size: 16px;
 }
 
+.editProfileForm{
+    width: 50%;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-bottom: 2em;
+    float: left;
+}
+
+aside{
+    float: left;
+    width: 25%;
+    margin-top: 2em;
+}
+
+.roundImage{
+    border-radius: 50%;
+}
+
 
 /* .firstLabel input[type=text]{
     width: 5em;
