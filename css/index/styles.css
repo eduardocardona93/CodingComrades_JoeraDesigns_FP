@@ -1,7 +1,39 @@
-#containter {
+#container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.containg {
+position: relative;
+text-align: center;
+color: #fff;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 3em;
+font-weight: bold;
+}
+
+.welcome {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.content {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2em;
+}
+.content h2 {
+    font-size: 1.1em;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;    
+}
+.content p {
+    padding-left: 2em;
+    padding-right: 2em;
 }
 
 header {
