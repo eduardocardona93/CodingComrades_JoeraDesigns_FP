@@ -1,6 +1,6 @@
 let db = null;
 let objectStore = null;
-let DBOpenReq = indexedDB.open('JoeraDB', 5);
+let DBOpenReq = indexedDB.open('JoeraDB', 6);
 
 DBOpenReq.addEventListener('error', (err) => {
     //Error occurred while trying to open DB
