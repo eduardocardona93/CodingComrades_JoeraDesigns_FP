@@ -549,6 +549,7 @@ width: 100%;
     padding-bottom: 3em;
     padding-left: 3em;
     padding-right: 3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .about-us-div{
@@ -559,8 +560,10 @@ width: 100%;
         -webkit-column-width: 20em;
         -moz-column-width: 20em;
         column-width: 20em; */
-    text-align: ju;
-    
+    text-align: justify;
+    text-justify: inter-word;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
 }
 
 
@@ -739,6 +742,7 @@ width: 100%;
     font-weight: bold;
    
 }
+
 
 
 /* ----------------------------FAQ------------------------------------------- */
