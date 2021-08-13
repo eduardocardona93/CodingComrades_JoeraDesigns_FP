@@ -11,7 +11,7 @@ DBOpenReq.addEventListener('error', (err) => {
     //DB has been opened... after upgradeneeded
     db = ev.target.result;
     console.log('success opening DB');
-
+    fetchData();
     insertProducts();
   });
 

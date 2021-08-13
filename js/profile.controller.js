@@ -1,19 +1,23 @@
-var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-console.log("currentUser profile: ", currentUser);
-
-document.getElementById('firstName').value = currentUser.firstName;
-document.getElementById('lastName').value = currentUser.lastName;
-document.getElementById('birthday').value = currentUser.birthday;
-document.getElementById('phone').value = currentUser.phone;
-document.getElementById('pUrl').value = currentUser.pUrl;
-document.getElementById('genderMale').checked = currentUser.gender == "Male" ? true : false;
-document.getElementById('genderFemale').checked = currentUser.gender != "Male" ? true : false;
-document.getElementById('comments').value = currentUser.comments;
+if(!localStorage || !localStorage.getItem('currentUser')){
+  location.href="index.html";
+}
 
 let nameRegex = /^[a-zA-Z ]+$/;
 let phoneRegex = /^[0-9]{10}$/;
 let imageBits="";
+var currentUser = {};
 
+function fetchData (){
+  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  document.getElementById('firstName').value = currentUser.firstName;
+  document.getElementById('lastName').value = currentUser.lastName;
+  document.getElementById('birthday').value = currentUser.birthday;
+  document.getElementById('phone').value = currentUser.phone;
+  document.getElementById('pUrl').value = currentUser.pUrl;
+  document.getElementById('genderMale').checked = currentUser.gender == "Male" ? true : false;
+  document.getElementById('genderFemale').checked = currentUser.gender != "Male" ? true : false;
+  document.getElementById('comments').value = currentUser.comments;
+}
 document.getElementById('btnUpdate').addEventListener('click', (ev) => {
     ev.preventDefault();
     let firstName = document.getElementById('firstName').value.trim();
@@ -56,6 +60,7 @@ document.getElementById('btnUpdate').addEventListener('click', (ev) => {
     let transaction = createTransaction('userStore', 'readwrite');
     transaction.oncomplete = (ev) => {
       alert("Data updated succesfully!");
+      location.href = "index.html"
       localStorage.setItem('currentUser', JSON.stringify(currentUser));
     };
 
@@ -78,6 +83,7 @@ document.getElementById('btnUpdate').addEventListener('click', (ev) => {
     return phoneRegex.test(phone);
   }
   
+
   function doImageTest() {  
     console.log('doImageTest');
     let image = document.getElementById('testImage');

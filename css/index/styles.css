@@ -154,6 +154,8 @@ body{
     box-sizing: border-box;
  }
 
+/* ----------------------------------Footer--------------------------------- */
+
 footer a{
     color: white;
     text-decoration: none;
@@ -164,14 +166,23 @@ footer p{
     color: white;
     padding-top: 2em;
 }
+footer ul{
+    padding: 0px;
+  
+}
 
 footer ul li{
     display:  inline-block;
-    width: 20%;
-    padding-left: 1em;
-    padding-bottom: 1.5em;
-    padding-top: 1.5em;
+   align-items: center;
+  padding: 0px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: .5em;
+  margin-right: .5em;
 }
+
+
+
 
 .contact {
     padding-bottom: 1.2em;
@@ -272,7 +283,7 @@ footer ul li{
     font-size: 16px;
 }
 
-.editProfileForm{
+/* .editProfileForm{
     width: 50%;
     margin-left: 5%;
     margin-right: 10%;
@@ -288,7 +299,7 @@ aside{
 
 .roundImage{
     border-radius: 50%;
-}
+} */
 
 
 /* .firstLabel input[type=text]{
@@ -811,6 +822,13 @@ margin-top: 1em;
     .desktop{
         display: inline;
     }
+    footer ul{
+        padding: 0px;
+      
+    }
+    
+  
+    
 
   }
   
@@ -831,5 +849,7 @@ margin-top: 1em;
     .desktop{
         display: inline;
     }
+  
+    
   }
   
