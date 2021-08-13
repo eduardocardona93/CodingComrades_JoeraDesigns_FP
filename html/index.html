@@ -26,7 +26,7 @@
   <div id="container">
     <!-- this area is for the logo -->
     <header>
-      <a href="index.html"><img src="../src/joera_1.png" alt="Joera"></a>
+      <a href="index.html"><img style=width:10em; src="../src/joera.png" alt="Joera"></a>
       <h1 style="color: #fff;font-size: 2em;">JOERA</h1>
     </header>
     <!-- Menu for Mobile  -->
@@ -175,6 +175,74 @@
         </div>
 
       </section>
+      <div class="container">
+        <div class="contactForm">
+          <div class="titleContact">
+            <h1>SEND US A MESSSAGE</h1>
+            <p>Please complete the quick form below. We will get back to you soon.</p>
+            <hr>
+          </div>
+          <div class="formFields">
+            <form>
+              
+              <label for="fname" >First Name</label><br>
+              <input type="text" id="fname" name="firstname" placeholder="First name" class="inputText" required>
+            
+              <label for="lname" >Last Name</label><br>
+              <input type="text" id="lname" name="lastname" placeholder="Last name" class="inputText" required>
+              
+              <label for="email" >Email</label><br>
+              <input type="email" id="email" name="email" placeholder="Email" class="inputText" required>
+            
+              <label for="phone" >Phone</label><br>
+              <input type="text" id="phone" name="phone" placeholder="Phone" class="inputText" required>
+              
+              <label for="method" >Preferred method of contact</label><br>
+              <select id="method" name="method" required>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+              </select>
+    
+              <label for="subject" >Subject</label><br>
+              <textarea id="subject" name="subject" placeholder="Write your query" class="inputText" required></textarea><br><br>
+          
+              <input id="btnSubmit" type="submit" value="Submit" class="btnSubmit">
+            </form>
+          </div>
+        </div>
+        
+        <div class="maps">
+          <div class="titleContact">
+            <h1>CONTACT INFORMATION</h1>
+            <p>If the form is not your thing, Don't worry, get connect with as from any of the below options.</p>
+            <hr>
+          </div>
+          <strong>City</strong><br>
+          Toronto, Canada<br><br>
+          <strong>Email</strong><br>
+          help@joera.com<br><br>
+          <strong>Call</strong><br>
+          +1(647)748-4819<br><br>
+          <strong>Location</strong>
+          <div id="googleMap">
+          </div>
+        </div>
+      </div>
+
+  </div>
+  <script>
+      function myMap() {
+      var mapProp= {
+          center:new google.maps.LatLng(43.6532,-79.3832),
+          zoom:5,
+      };
+
+      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+      var marker = new google.maps.Marker({position: new google.maps.LatLng(43.6532,-79.3832)});
+      marker.setMap(map);
+      }
+  </script>
       
     </main>
 
@@ -218,6 +286,9 @@
     </footer>
   </div>
   <script src="../js/layout.controller.js"></script>
+  <script src="../js/db.controller.js"></script>
+  <script src="../js/contact.controller.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbHYkmNnrECcJOwVb0szq4DHDo3413OGY&callback=myMap"></script>
   <script src="../js/index.js"></script>
 
 </body>

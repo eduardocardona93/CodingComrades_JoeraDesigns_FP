@@ -12,8 +12,6 @@ DBOpenReq.addEventListener('error', (err) => {
     db = ev.target.result;
     console.log('success opening DB');
 
-    fetchData();
-
     insertProducts();
   });
 
