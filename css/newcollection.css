@@ -1,22 +1,22 @@
 
 
 #collectionList{
-    margin: 0 calc(10px * -1 + 1px);
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-    line-height: normal;
+  width:95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0 auto;
 }
 
 .colItem{
-    width: calc(100% / 4 + 0px);
-    padding: 10px;
-    display: flex;
+  width:280px;
+  list-style-type: none;
+  border-radius: 1em;
+ margin-top: 2em;
+  position: relative;
+  flex-grow: 0.5;
 }
 
 .card {
@@ -85,3 +85,18 @@
     color: #fff;
     border-radius:0.4em 0.4em 0.4em 0.4em;
   }
+
+  #divSearchBar{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: 12%;
+    margin-right: 12%;
+  }
+  
+#searchBar{
+    padding: .5em;
+   width: 100%;
+margin-right: 1em;
+    font-size: 1em;
+}

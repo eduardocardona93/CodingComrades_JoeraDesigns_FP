@@ -692,14 +692,8 @@ width: 100%;
 
 
 
-/* -------------------------------Shop Page----------------------------- */
-/* search bar */
-#searchBar{
-    padding: .6em;
-    margin-top: 2em;
 
-    font-size: 1em;
-}
+
 
 .feature-heading{
     display: flex;
