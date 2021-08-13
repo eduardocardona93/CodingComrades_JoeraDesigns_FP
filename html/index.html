@@ -65,9 +65,12 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content_log">
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
+            <a class="notLoggedControls" href="login.html">Login</a>
+            <a class="notLoggedControls" href="register.html">Register</a>
+            <a class="loggedUserControls" href="profile.html">Profile</a>
+            <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser">Log out</a>
           </div>
+
         </div>
 
         <div class="dropdown_2">
@@ -101,6 +104,29 @@
             hardwork and diligence. Joera name originated from Latin which means trends and we ultimately focus to deliver you the best trends and designs at your door step.</p>
         </div>
       </div>
+
+      <h1 style="text-align: center; margin-top: 1.5em;">DEALS OF THE DAY</h1> 
+    <div class="clock">
+      <h2 class="countDown">Countdown Clock</h1>
+      <div id="clockdiv">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">Days</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">Hours</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">Minutes</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">Seconds</div>
+        </div>
+      </div>
+    </div>
       
       <!---sale------------------------------------>
       <section class="sale">
@@ -183,8 +209,9 @@
         <p>&copy; Copyright 2021. All Rights Reserved.</p>
       </div>
     </footer>
-    <script src="../js/index.js"></script>
   </div>
+  <script src="../js/layout.controller.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 
 </html>

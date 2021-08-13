@@ -54,8 +54,10 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content_log">
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
+            <a class="notLoggedControls" href="login.html">Login</a>
+            <a class="notLoggedControls" href="register.html">Register</a>
+            <a class="loggedUserControls" href="profile.html">Profile</a>
+            <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser">Log out</a>
           </div>
         </div>
 
@@ -183,7 +185,7 @@
       marker.setMap(map);
       }
   </script>
-  <script src="../js/login.controller.js"></script>
+  <script src="../js/db.controller.js"></script>
   <script src="../js/contact.controller.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuTHJPti-Qb7yct1ocqUx8LMlOXFtC82c&callback=myMap"></script>
 </body>
