@@ -4,7 +4,16 @@
   let emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let phoneRegex = /^[0-9]{10}$/;
 
-  function fetchData(){};
+  function fetchData(){
+    
+    if(localStorage && localStorage.getItem('currentUser')) {
+      const userData = JSON.parse(localStorage.getItem('currentUser'));
+      document.getElementById('fname').value = userData.firstName;
+      document.getElementById('lname').value = userData.lastName;
+      document.getElementById('email').value = userData.email;
+      document.getElementById('phone').value = userData.phone;
+    }
+  };
   document.getElementById('btnSubmit').addEventListener('click', (ev) => {
     ev.preventDefault();
     //one of the form buttons was clicked

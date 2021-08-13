@@ -1,5 +1,10 @@
+if(!localStorage || !localStorage.getItem('currentUser')){
+    location.href="index.html";
+}
+
 let collectionList = document.getElementById('collectionList');
-const currentWishList = JSON.parse(localStorage.getItem('currentUser'))['wishList'];
+let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+let currentWishList = currentUser['wishList'];
 
 document.getElementById('searchButton').addEventListener('click', (ev) => {
     const searchInput  = document.getElementById('searchBar');
@@ -10,11 +15,11 @@ document.getElementById('searchButton').addEventListener('click', (ev) => {
 function fetchData(filterText){
     collectionList.innerHTML="";
     let allproducts = JSON.parse(localStorage.getItem('listProducts'));
-    if(filterText && filterText != ""){
+    console.log(allproducts)
+    if(filterText && filterText != "") {
         allproducts = allproducts.filter(product => {
             return  product.name.toLowerCase().indexOf(filterText) > -1 ||
                     product.prodId.toLowerCase().indexOf(filterText) > -1;
-
         });
     }
 
@@ -45,19 +50,43 @@ function fetchData(filterText){
         cardItem.appendChild(imgItem);
         cardItem.appendChild(captionContainer);
         
-        const addWishList = document.createElement('button');
-        addWishList.setAttribute('data-prod-id', element.prodId);
+        const wishListToggleBtn = document.createElement('button');
+        wishListToggleBtn.setAttribute('data-prod-id', element.prodId);
+        const currentPositionInWishList = currentWishList.indexOf(element.prodId);
+        if(currentPositionInWishList > -1){
+                      
+            wishListToggleBtn.innerHTML = "Remove from Wishlist";
+            wishListToggleBtn.onclick = function(ev){
+                wishListToggleBtn.innerHTML = "Add to Wishlist";
+                currentWishList.splice(currentPositionInWishList,1);
+                currentUser.wishList = currentWishList;
+                let transaction = createTransaction('userStore', 'readwrite');
+                transaction.oncomplete = (ev) => {
+                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                };
+                console.log(currentUser.wishList)
+                let store = transaction.objectStore('userStore');
+                store.put(currentUser); //request an insert/add
+                fetchData(filterText)
+            }
+        }else{
+            wishListToggleBtn.innerHTML = "Add to Wishlist";
+            wishListToggleBtn.onclick = function(ev){
+                wishListToggleBtn.innerHTML = "Remove from Wishlist";
+                currentWishList.push(this.getAttribute('data-prod-id'));
+                currentUser.wishList = currentWishList;
+                let transaction = createTransaction('userStore', 'readwrite');
+                transaction.oncomplete = (ev) => {
+                    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                };
+                console.log(currentUser.wishList)
+                let store = transaction.objectStore('userStore');
+                store.put(currentUser); //request an insert/add
+                fetchData(filterText)
+            }
+        }
+        cardItem.appendChild(wishListToggleBtn);
         
-        addWishList.innerHTML = "Add to Wishlist";
-        addWishList.onclick = function(ev){
-            this.getAttribute('data-prod-id');
-        }
-
-        if(currentWishList.indexOf(element.prodId) > -1){
-            addWishList.setAttribute('disabled','disabled');
-        }
-
-        cardItem.appendChild(addWishList);
         listItem.appendChild(cardItem);
         
         collectionList.appendChild(listItem)

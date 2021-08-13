@@ -1,3 +1,8 @@
+if(!localStorage || !localStorage.getItem('currentUser')){
+  location.href="index.html";
+}
+
+
 var currentUser = JSON.parse(localStorage.getItem('currentUser'));
 console.log("currentUser profile: ", currentUser);
 
@@ -78,3 +83,4 @@ document.getElementById('btnUpdate').addEventListener('click', (ev) => {
     return phoneRegex.test(phone);
   }
   
+  function fetchData (){}
