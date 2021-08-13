@@ -1,0 +1,52 @@
+/* ----------------------------------Media Query ---------------------------------------- */
+@media screen and (min-width: 481px) {
+   
+  
+}
+
+
+/* --------------------Media Query for the tablet view port targets screen only ----------------------------------------*/
+@media only screen and (min-width: 685px) {
+
+  /* Change form with for tab*/
+  main form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+ 
+  }
+  .mobile{
+      display: none;
+  }
+  .desktop{
+      display: inline;
+  }
+  footer ul{
+      padding: 0px;
+    
+  }
+  
+
+}
+
+
+/* Media query for desktop width size */
+@media only screen and (min-width: 860px) {
+
+   /* Change form with for desktop*/
+  main form {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .mobile{
+      display: none;
+  }
+  .desktop{
+      display: inline;
+  }
+
+  
+}
+
