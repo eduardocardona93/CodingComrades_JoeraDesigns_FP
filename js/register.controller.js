@@ -45,6 +45,7 @@ if(localStorage && localStorage.getItem('currentUser')){
     let gender = document.getElementById('genderMale').checked ? "Male" : "Female";
     let comments = document.getElementById('comments').value.trim();
     let consent = document.getElementById('consent').checked;
+    let wishList = [];
     let id = Math.floor(100000 + Math.random() * 900000);
 
     if (firstName == "" || firstName == null || !validateString(firstName)) {
@@ -90,6 +91,8 @@ if(localStorage && localStorage.getItem('currentUser')){
       comments,
       consent,
       imageBits,
+      imageBits,
+      wishList,
       timestamp: Date.now()
     };
 

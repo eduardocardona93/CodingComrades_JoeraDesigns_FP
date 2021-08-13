@@ -1,6 +1,6 @@
 
 
-.collectionList{
+#collectionList{
     margin: 0 calc(10px * -1 + 1px);
     display: flex;
     flex-wrap: wrap;
@@ -32,7 +32,7 @@
   }
   
   /* Add some padding inside the card container */
-  .container {
+  .captionContainer {
     padding: 2px 16px;
   }
 

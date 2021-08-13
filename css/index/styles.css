@@ -520,6 +520,33 @@ button[type=reset]{
 
 /* -------------------about us----------------------------------- */
 
+.about_banner img{
+width: 100%;
+}
+.about_banner-text{
+    position: absolute;
+    right: 10%;
+    top: 70%;
+ 
+    display: flex;
+    flex-direction: column;
+}
+
+.about_banner-text strong{
+    font-size: 6em;
+    font-weight: 500;
+   
+   
+}
+#about-heading{
+    background: white;
+    text-align: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
 .about-us-div{
    padding: 1em;
         /* -webkit-column-count: 2;
@@ -709,7 +736,7 @@ button[type=reset]{
 
 
 #faqDiv{
-    padding: 1em;
+    padding: 3em;
 }
 
 #faqDiv summary{
@@ -721,7 +748,16 @@ button[type=reset]{
     font-size: .5em;
     
 }
+.faq_que{
+    font-size: 1em;
+    font-weight: 400;
 
+}
+.faq__content{
+font-size: .9em;
+margin-left: 2em;
+margin-top: 1em;
+}
 
 /* ---------------------------Store Policy------------------*/
 
