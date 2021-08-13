@@ -54,8 +54,10 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content_log">
-            <a href="login.html">Login</a>
-            <a href="register.html">Register</a>
+            <a class="notLoggedControls" href="login.html">Login</a>
+            <a class="notLoggedControls" href="register.html">Register</a>
+            <a class="loggedUserControls" href="profile.html">Profile</a>
+            <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser">Log out</a>
           </div>
         </div>
 
@@ -130,9 +132,10 @@
            <p>&copy; Copyright 2021. All Rights Reserved.</p>
        </div>
    </footer>
-   <script src="../js/db.controller.js"></script>
-   <script src="../js/login.controller.js"></script>
   </div>
+  <script src="../js/layout.controller.js"></script>
+  <script src="../js/db.controller.js"></script>
+  <script src="../js/login.controller.js"></script>
 </body>
 
 </html>
