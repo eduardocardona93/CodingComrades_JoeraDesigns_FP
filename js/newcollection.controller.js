@@ -32,6 +32,7 @@ function fetchData(filterText) {
 
         const imgItem = document.createElement('img');
         imgItem.style.width = "100%";
+        imgItem.className = "collectionImg";
         imgItem.src = "../src/products/prod-" + element.prodId + "-1.jpg";
 
         const captionContainer = document.createElement('div');
@@ -56,7 +57,9 @@ function fetchData(filterText) {
 
             if (currentPositionInWishList > -1) {
                 wishListToggleBtn.innerHTML = "Remove from Wishlist";
+                wishListToggleBtn.className = "removeWLbtn";
                 wishListToggleBtn.onclick = function (ev) {
+                    wishListToggleBtn.className = "addWLbtn";
                     wishListToggleBtn.innerHTML = "Add to Wishlist";
                     currentWishList.splice(currentPositionInWishList, 1);
                     currentUser.wishList = currentWishList;
@@ -71,7 +74,9 @@ function fetchData(filterText) {
                 }
             } else {
                 wishListToggleBtn.innerHTML = "Add to Wishlist";
+                wishListToggleBtn.className = "addWLbtn";
                 wishListToggleBtn.onclick = function (ev) {
+                    wishListToggleBtn.className = "removeWLbtn";
                     wishListToggleBtn.innerHTML = "Remove from Wishlist";
                     currentWishList.push(this.getAttribute('data-prod-id'));
                     currentUser.wishList = currentWishList;
