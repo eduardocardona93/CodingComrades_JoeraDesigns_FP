@@ -13,9 +13,17 @@ function logOutCurrentUser() {
 }
 
 if(localStorage && localStorage.getItem('currentUser')){
-    document.getElementById("loggedUserControls").style.display = "block";
-    document.getElementById("notLoggedControls").style.display = "none";
+    document.querySelectorAll(".loggedUserControls").forEach(element => {
+        element.style.display = "block";
+    });
+    document.querySelectorAll(".notLoggedControls").forEach(element => {
+        element.style.display = "none";
+    });
 }else{
-    document.getElementById("loggedUserControls").style.display = "none";
-    document.getElementById("notLoggedControls").style.display = "block";
+    document.querySelectorAll(".loggedUserControls").forEach(element => {
+        element.style.display = "none";
+    });
+    document.querySelectorAll(".notLoggedControls").forEach(element => {
+        element.style.display = "block";
+    });
 }

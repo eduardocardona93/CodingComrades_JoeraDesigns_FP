@@ -5,8 +5,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joera Designs</title>
+  <title>Joera Designs | About us</title>
   <link rel="stylesheet" href="../css/index/styles.css" />
+  <link rel="icon" href="../src/favicon.ico">
 </head>
 
 <body>
@@ -27,18 +28,20 @@
         <div class="overlay-content">
           <a href="index.html">Home</a>
           <a href="newcollection.html">New Collection</a>
-          <a href="login.html">Login</a>
-          <a href="register.html">Register</a>
+          <a class="notLoggedControls" href="login.html">Login</a>
+          <a class="notLoggedControls" href="register.html">Register</a>
+          <a class="loggedUserControls" href="profile.html">Profile</a>   
+          <a class="loggedUserControls" href="wishlist.html">Wishlist</a>
           <a href="aboutus.html">What is Joera?</a>
-
           <a href="contact.html">Contact Us</a>
           <a href="storepolicy.html">Store Policy</a>
           <a href="faq.html">FAQs</a>
+          <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser()">Log out</a>
         </div>
       </div>
 
       <!-- Use any element to open/show the overlay navigation menu -->
-      <span onclick="openNav()"><img src="../src/side_menu.png" width="30px" height="35px"></span>
+      <span onclick="openNav()"><img src="../src/side_menu.png" width="35px" height="35px"></span>
     </div>
     <!-- Navigation Menu for Dsktop  -->
 
@@ -56,8 +59,9 @@
           <div class="dropdown-content_log">
             <a class="notLoggedControls" href="login.html">Login</a>
             <a class="notLoggedControls" href="register.html">Register</a>
-            <a class="loggedUserControls" href="profile.html">Profile</a>
-            <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser">Log out</a>
+            <a class="loggedUserControls" href="profile.html">Profile</a>   
+            <a class="loggedUserControls" href="wishlist.html">Wishlist</a>
+            <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser()">Log out</a>
           </div>
         </div>
 
@@ -114,25 +118,25 @@
           <ul>
             <li>
               <a href="https://twitter.com/iamsmt555" target="_blank">
-                <img src="../src/twitter1.png" width="25" height="25">
+                <img src="../src/twitter1.png" width="30" height="30">
                 Twitter
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/sumit-desai-964b35101/" target="_blank">
-                <img src="../src/linkedin1.png" width="25" height="25">
+                <img src="../src/linkedin1.png" width="30" height="30">
                 Linkedin
               </a>
             </li>
             <li>
               <a href="mailto:sumitdesai1997@gmail.com" target="_blank">
-                <img src="../src/email1.png" width="25" height="25">
+                <img src="../src/email1.png" width="30" height="30">
                 Email
               </a>
             </li>
             <!-- <li>
                           <a href="https://www.instagram.com/iamsmt555/" target="_blank">
-                              <img src="../src/instagram1.png"  width="25" height="25">
+                              <img src="../src/instagram1.png"  width="30" height="30">
                               Instagram
                           </a>
                       </li> -->

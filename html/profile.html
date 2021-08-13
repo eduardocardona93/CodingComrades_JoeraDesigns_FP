@@ -5,9 +5,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joera Designs | Forgot Password</title>
+  <title>Joera Designs</title>
   <link rel="stylesheet" href="../css/index/styles.css" />
-  <link rel="icon" href="../src/favicon.ico">
 </head>
 
 <body>
@@ -18,9 +17,9 @@
       <h1>JOERA</h1>
     </header>
     <!-- Menu for Mobile  -->
-
+   
     <div class="mobile">
-      <!-- The overlay -->
+       <!-- The overlay -->
       <div id="myNav" class="overlay">
         <!-- Button to close the overlay navigation -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -28,30 +27,28 @@
         <div class="overlay-content">
           <a href="index.html">Home</a>
           <a href="newcollection.html">New Collection</a>
-          <a class="notLoggedControls" href="login.html">Login</a>
-          <a class="notLoggedControls" href="register.html">Register</a>
-          <a class="loggedUserControls" href="profile.html">Profile</a>   
-          <a class="loggedUserControls" href="wishlist.html">Wishlist</a>
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
           <a href="aboutus.html">What is Joera?</a>
+         
           <a href="contact.html">Contact Us</a>
           <a href="storepolicy.html">Store Policy</a>
           <a href="faq.html">FAQs</a>
-          <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser()">Log out</a>
         </div>
       </div>
 
       <!-- Use any element to open/show the overlay navigation menu -->
-      <span onclick="openNav()"><img src="../src/side_menu.png" width="35px" height="35px"></span>
+      <span onclick="openNav()"><img src="../src/side_menu.png" width="30px" height="35px"></span>
     </div>
     <!-- Navigation Menu for Dsktop  -->
-
+  
     <div class="desktop">
-      <!-- this area is for the hyperlinks to other pages -->
+        <!-- this area is for the hyperlinks to other pages -->
       <div class="navbar">
         <a href="index.html">Home</a>
         <a href="newcollection.html">New Collection</a>
         <a href="aboutus.html">What is Joera?</a>
-        <a href="instagram.html">Instagram</a>
+       
         <div class="dropdown">
           <button class="dropbtn">Account
             <i class="fa fa-caret-down"></i>
@@ -59,8 +56,7 @@
           <div class="dropdown-content_log">
             <a class="notLoggedControls" href="login.html">Login</a>
             <a class="notLoggedControls" href="register.html">Register</a>
-            <a class="loggedUserControls" href="profile.html">Profile</a>   
-            <a class="loggedUserControls" href="wishlist.html">Wishlist</a>
+            <a class="loggedUserControls" href="profile.html">Profile</a>
             <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser()">Log out</a>
           </div>
         </div>
@@ -81,15 +77,59 @@
 
     <!-- main content of the website -->
     <main>
-      <form name="forgotForm">
-        <label for="email"><b>Enter registered Email</b></label>
-        <input type="email" name="email" id="email" required>
-        <label id="randomPassword"></b></label>
-        <br>
-        <br>
-        <button id="btnForgotPassword" type="submit">Submit</button>
-      </form>
+      <div class="container">
+        <form class="editProfileForm">
+
+          <h1>Edit Profile</h1>
+
+          <label for="firstName"><b>First Name</b></label>
+          <input type="text" name="firstName" id="firstName" class="inputText" pattern="[A-Za-z]{1,5}" required>
+
+          <label for="lastName"><b>Last Name</b></label>
+          <input type="text" name="lastName" id="lastName" class="inputText" required>
+
+          <label for="birthday"><b>Date of Birth</b></label><br>
+          <input type="date" id="birthday" name="birthday" class="inputText" required><br><br>
+
+          <label for="phone"><b>Phone Number</b></label>
+          <input type="tel" name="phone" id="phone" class="inputText" required>
+
+          <label for="pUrl"><b>Personal URL</b></label>
+          <input type="url" name="pUrl" id="pUrl" class="inputText" required>
+          <br><br>
+
+          <label for="gender"><b>Gender</b></label>
+          <br>
+          <input type="radio" id="genderMale" name="gender" value="Male" checked>
+          <label class="radio" for="genderMale">Male</label>
+
+          <input type="radio" id="genderFemale" name="gender" value="Female">
+          <label class="radio" for="genderFemale">female</label>
+          <br>
+          <br>
+
+          <label for="comments"><b>Comments</b></label>
+          <textarea name="comments" id="comments" class="inputText" rows="3" cols="25"></textarea>
+
+          <br>
+          <label>
+            <input id="consent" type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Information
+            provided is
+            true and correct
+          </label>
+
+          <div class="clearfix">
+            <button id="btnClearAll" type="reset" class="clearbtn">Clear All</button>
+            <button id="btnUpdate" type="submit" class="updateBtn">Update</button>
+          </div>
+        </form>
+      </div>
+      <aside>
+        <img class="roundImage" src="../src/profileImage.jpg" alt="Sumit Desai" width="250" height="250" />
+        <img src="../src/editIcon.png" style= "margin-left: -2.1em;" width="40" height="40" alt="Sumit Desai Resume" width="50em" height="50em">
+      </aside>
     </main>
+
 
     <!-- footer of the webpage -->
     <footer>
@@ -101,25 +141,25 @@
                   <ul>
                       <li>
                           <a href="https://twitter.com/iamsmt555" target="_blank">
-                              <img src="../src/twitter1.png" width="30" height="30">
+                              <img src="../src/twitter1.png" width="25" height="25">
                               Twitter
                           </a>
                       </li>
                       <li>
                           <a href="https://www.linkedin.com/in/sumit-desai-964b35101/" target="_blank">
-                              <img src="../src/linkedin1.png"  width="30" height="30">
+                              <img src="../src/linkedin1.png"  width="25" height="25">
                               Linkedin
                           </a>
                       </li>
                       <li>
                           <a href="mailto:sumitdesai1997@gmail.com" target="_blank">
-                              <img src="../src/email1.png"  width="30" height="30">
+                              <img src="../src/email1.png"  width="25" height="25">
                               Email
                           </a>
                       </li>
                       <!-- <li>
                           <a href="https://www.instagram.com/iamsmt555/" target="_blank">
-                              <img src="../src/instagram1.png"  width="30" height="30">
+                              <img src="../src/instagram1.png"  width="25" height="25">
                               Instagram
                           </a>
                       </li> -->
@@ -131,8 +171,7 @@
    </footer>
   </div>
   <script src="../js/layout.controller.js"></script>
-  <script src="../js/db.controller.js"></script>
-  <script src="../js/forgot_password.controller.js"></script>
+  <script src="../js/index.js"></script>
 </body>
 
 </html>
