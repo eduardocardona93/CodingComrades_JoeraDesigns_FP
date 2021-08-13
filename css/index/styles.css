@@ -113,22 +113,24 @@ body{
     margin-top: 2em;
 }
 
+/* -------------------------------contact us------------------------------------- */
+
 .contactForm{
-    width: 35%;
-    margin-left: 5%;
-    margin-right: 10%;
-    float: left;
+    width: 100%;
+ 
+    
 }
+
+
 
 .formFields{
     margin-top: 2em;
-    margin-left: -8em;
+    width: 100%;
 }
-
 #googleMap{
-    width:40%;
+    width:100%;
     margin-top: 3em;
-    margin-right: 10%;
+    
     height: 400px;
 }
  

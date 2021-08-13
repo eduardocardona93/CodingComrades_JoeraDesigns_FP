@@ -25,7 +25,25 @@
       padding: 0px;
     
   }
+  .contactForm{
+    width: 40%;
+    margin-right: 1em;
+    float: left;
+    
+}
+
+.contactForm form{
+  padding-left: 2em ;
+  padding-right: 2em;
+  width: 100%;
+}
+#googleMap{
+  width:50%;
+  margin-top: 3em;
   
+  height: 400px;
+}
+
 
 }
 
@@ -46,6 +64,23 @@
   .desktop{
       display: inline;
   }
+  .contactForm{
+    width: 40%;
+    margin-right: 2em;
+    float: left;
+    
+}
+.contactForm form{
+  padding-left: 2em ;
+  padding-right: 1em;
+
+  width: 100%;
+}
+#googleMap{
+  width:50%;
+  margin-top: 3em;
+  height: 400px;
+}
 
   
 }
