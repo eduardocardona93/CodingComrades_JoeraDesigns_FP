@@ -113,22 +113,24 @@ body{
     margin-top: 2em;
 }
 
+/* -------------------------------contact us------------------------------------- */
+
 .contactForm{
-    width: 35%;
-    margin-left: 5%;
-    margin-right: 10%;
-    float: left;
+    width: 100%;
+ 
+    
 }
+
+
 
 .formFields{
     margin-top: 2em;
-    margin-left: -8em;
+    width: 100%;
 }
-
 #googleMap{
-    width:40%;
+    width:100%;
     margin-top: 3em;
-    margin-right: 10%;
+    
     height: 400px;
 }
  
@@ -798,58 +800,3 @@ margin-top: 1em;
     padding: 0px;
 }
 
-/* ----------------------------------Media Query ---------------------------------------- */
-  @media screen and (min-width: 481px) {
-   
-  
-  }
-
-
-  /* --------------------Media Query for the tablet view port targets screen only ----------------------------------------*/
-
-@media only screen and (min-width: 685px) {
-
-    /* Change form with for tab*/
-    main form {
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-   
-    }
-    .mobile{
-        display: none;
-    }
-    .desktop{
-        display: inline;
-    }
-    footer ul{
-        padding: 0px;
-      
-    }
-    
-  
-    
-
-  }
-  
-  
-  /* Media query for desktop width size */
-  @media only screen and (min-width: 860px) {
-
-     /* Change form with for desktop*/
-    main form {
-  
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-    }
-    .mobile{
-        display: none;
-    }
-    .desktop{
-        display: inline;
-    }
-  
-    
-  }
-  

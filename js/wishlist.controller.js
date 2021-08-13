@@ -33,6 +33,7 @@ function fetchData(filterText){
     
         const imgItem = document.createElement('img');
         imgItem.style.width="100%";
+        imgItem.className = "collectionImg";
         imgItem.src="../src/products/prod-" +element.prodId+"-1.jpg";
     
         const captionContainer = document.createElement('div');
@@ -55,8 +56,8 @@ function fetchData(filterText){
         const currentPositionInWishList = currentWishList.indexOf(element.prodId);
                       
         wishListToggleBtn.innerHTML = "Remove from Wishlist";
+        wishListToggleBtn.className = "removeWLbtn";
         wishListToggleBtn.onclick = function(ev){
-            wishListToggleBtn.innerHTML = "Add to Wishlist";
             currentWishList.splice(currentPositionInWishList,1);
             currentUser.wishList = currentWishList;
             let transaction = createTransaction('userStore', 'readwrite');
