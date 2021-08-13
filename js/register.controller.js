@@ -7,7 +7,7 @@ if(localStorage && localStorage.getItem('currentUser')){
   let emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let phoneRegex = /^[0-9]{10}$/;
   let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
+  let imageBits = "";
   // Image upload 
   var fileTag = document.getElementById("filetag"),
     preview = document.getElementById("preview");
@@ -21,7 +21,7 @@ if(localStorage && localStorage.getItem('currentUser')){
 
     if (input.files && input.files[0]) {
       reader = new FileReader();
-
+      imageBits = e.target.result;
       reader.onload = function (e) {
         preview.setAttribute('src', e.target.result);
       }
@@ -89,6 +89,7 @@ if(localStorage && localStorage.getItem('currentUser')){
       gender,
       comments,
       consent,
+      imageBits,
       timestamp: Date.now()
     };
 
