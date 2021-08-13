@@ -97,6 +97,26 @@
 #searchBar{
     padding: .5em;
    width: 100%;
-margin-right: 1em;
+    margin-right: 1em;
     font-size: 1em;
 }
+#searchWishListInput{
+  padding: .5em;
+ width: 100%;
+  margin-right: 1em;
+  font-size: 1em;
+}
+
+#searchWishListButton {
+  padding: 0.5em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  background-color: #37393a;
+  border-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 1.1em;
+  color: #fff;
+  border-radius:0.4em 0.4em 0.4em 0.4em;
+}
+
