@@ -27,13 +27,14 @@
         <div class="overlay-content">
           <a href="index.html">Home</a>
           <a href="newcollection.html">New Collection</a>
-          <a href="login.html">Login</a>
-          <a href="register.html">Register</a>
+          <a class="notLoggedControls" href="login.html">Login</a>
+          <a class="notLoggedControls" href="register.html">Register</a>
+          <a class="loggedUserControls" href="profile.html">Profile</a>
           <a href="aboutus.html">What is Joera?</a>
-         
           <a href="contact.html">Contact Us</a>
           <a href="storepolicy.html">Store Policy</a>
           <a href="faq.html">FAQs</a>
+          <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser()">Log out</a>
         </div>
       </div>
 
@@ -119,7 +120,6 @@
    </footer>
   </div>
   <script src="../js/layout.controller.js"></script>
-  <script src="../js/index.js"></script>
 </body>
 
 </html>
