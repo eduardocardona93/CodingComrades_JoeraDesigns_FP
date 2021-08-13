@@ -19,68 +19,69 @@
     </header>
     <!-- Menu for Mobile  -->
 
-    <div class="mobile">
-      <!-- The overlay -->
-      <div id="myNav" class="overlay">
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <!-- Overlay content -->
-        <div class="overlay-content">
-          <a href="index.html">Home</a>
-          <a href="newcollection.html">New Collection</a>
+  <div class="mobile">
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="index.html">Home</a>
+        <a href="newcollection.html">New Collection</a>
+        <a class="notLoggedControls" href="login.html">Login</a>
+        <a class="notLoggedControls" href="register.html">Register</a>
+        <a class="loggedUserControls" href="profile.html">Profile</a>   
+        <a class="loggedUserControls" href="wishlist.html">Wishlist</a>
+        <a href="aboutus.html">What is Joera?</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="storepolicy.html">Store Policy</a>
+        <a href="faq.html">FAQs</a>
+        <a class="loggedUserControls" href="changePassword.html">Change Password</a>
+        <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser()">Log out</a>
+      </div>
+    </div>
+
+    <!-- Use any element to open/show the overlay navigation menu -->
+    <span onclick="openNav()"><img src="../src/side_menu.png" width="35px" height="35px" style="margin-top: 1em; margin-bottom: 1em;"></span>
+  </div>
+  <!-- Navigation Menu for Dsktop  -->
+
+  <div class="desktop">
+    <!-- this area is for the hyperlinks to other pages -->
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="newcollection.html">New Collection</a>
+      <a href="aboutus.html">What is Joera?</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">Account
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content_log">
           <a class="notLoggedControls" href="login.html">Login</a>
           <a class="notLoggedControls" href="register.html">Register</a>
-          <a class="loggedUserControls" href="profile.html">Profile</a>
+          <a class="loggedUserControls" href="profile.html">Profile</a>   
           <a class="loggedUserControls" href="wishlist.html">Wishlist</a>
-          <a href="aboutus.html">What is Joera?</a>
-          <a href="contact.html">Contact Us</a>
-          <a href="storepolicy.html">Store Policy</a>
-          <a href="faq.html">FAQs</a>
           <a class="loggedUserControls" href="changePassword.html">Change Password</a>
           <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser()">Log out</a>
         </div>
-      </div>
-
-      <!-- Use any element to open/show the overlay navigation menu -->
-      <span onclick="openNav()"><img src="../src/side_menu.png" width="35px" height="35px"></span>
-    </div>
-    <!-- Navigation Menu for Dsktop  -->
-
-    <div class="desktop">
-      <!-- this area is for the hyperlinks to other pages -->
-      <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="newcollection.html">New Collection</a>
-        <a href="aboutus.html">What is Joera?</a>
-
-        <div class="dropdown">
-          <button class="dropbtn">Account
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content_log">
-            <a class="notLoggedControls" href="login.html">Login</a>
-            <a class="notLoggedControls" href="register.html">Register</a>
-            <a class="loggedUserControls" href="profile.html">Profile</a>
-            <a class="loggedUserControls" href="wishlist.html">Wishlist</a>
-            <a class="loggedUserControls" href="changePassword.html">Change Password</a>
-            <a class="loggedUserControls"  href="#" onclick="logOutCurrentUser()">Log out</a>
-          </div>
-        </div>
-
-        <div class="dropdown_2">
-          <button class="dropbtn">More
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="contact.html">Contact Us</a>
-            <a href="storepolicy.html">Store Policy</a>
-            <a href="faq.html">FAQs</a>
-          </div>
-        </div>
 
       </div>
-    </div>
 
+      <div class="dropdown_2">
+        <button class="dropbtn">More
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="contact.html">Contact Us</a>
+          <a href="storepolicy.html">Store Policy</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
     <!-- main content of the website -->
     <main>
       <div id="faqDiv">
