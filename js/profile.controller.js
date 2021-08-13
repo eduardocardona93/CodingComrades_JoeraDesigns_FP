@@ -78,3 +78,30 @@ document.getElementById('btnUpdate').addEventListener('click', (ev) => {
     return phoneRegex.test(phone);
   }
   
+  function doImageTest() {  
+    console.log('doImageTest');
+    let image = document.getElementById('testImage');
+    // let recordToLoad = parseInt(document.querySelector('#recordToLoad').value,10);
+    // if(recordToLoad === '') recordToLoad = 1;
+
+    let transaction = createTransaction('userStore', 'readwrite');
+    transaction.oncomplete = (ev) => {
+      alert("Data updated succesfully!");
+      localStorage.setItem('currentUser', JSON.stringify(currentUser));
+    };
+
+    let store = transaction.objectStore('userStore');
+    let request = store.get(0); //request an insert/add
+
+    request.onsuccess = (e) => {
+        let record = e.target.result.imageBits;
+        console.log('get success', record);
+        image.src = 'data:image/jpeg;base64,' + btoa(record.data);
+    };
+    request.onerror = (err) => {
+      console.log('error in request to add');
+    };
+  }
+
+
+
