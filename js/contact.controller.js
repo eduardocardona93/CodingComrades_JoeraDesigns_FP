@@ -1,51 +1,14 @@
-const contactController = (function init(){
-
-  let db = null;
-  let objectStore = null;
-  let DBOpenReq = indexedDB.open('JoeraDB', 4);
-
+  
   //REGEX
   let nameRegex = /^[a-zA-Z ]+$/;
   let emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let phoneRegex = /^[0-9]{10}$/;
 
-  DBOpenReq.addEventListener('error', (err) => {
-    //Error occurred while trying to open DB
-    console.warn(err);
-  });
-
-  DBOpenReq.addEventListener('success', (ev) => {
-    //DB has been opened... after upgradeneeded
-    db = ev.target.result;
-    console.log('success opening DB');
-  });
-
-  DBOpenReq.addEventListener('upgradeneeded', (ev) => {
-    //first time opening this DB
-    //OR a new version was passed into open()
-
-    console.log('upgrade db contact page', db);
-    db = ev.target.result;
-    let oldVersion = ev.oldVersion;
-    let newVersion = ev.newVersion || db.version;
-    console.log('Database updated from version', oldVersion, 'to version', newVersion);
-
-    if (db.objectStoreNames.contains('messageStore')) {
-      db.deleteObjectStore('messageStore');
-    }
-
-    //create the ObjectStore
-    objectStore = db.createObjectStore('messageStore', {
-      keyPath: 'mid',
-    });
-
-  });
-
+  function fetchData(){};
   document.getElementById('btnSubmit').addEventListener('click', (ev) => {
     ev.preventDefault();
     //one of the form buttons was clicked
 
-    console.log("Submit clicked");
     let firstName = document.getElementById('fname').value.trim();
     let lastName = document.getElementById('lname').value.trim();
     let email = document.getElementById('email').value.trim();
@@ -70,8 +33,6 @@ const contactController = (function init(){
       alert("Please enter valid value for subject!");
       return;
     }
-
-    console.log();
 
     let message = {
       mid,
@@ -105,14 +66,6 @@ const contactController = (function init(){
     };
   });
 
-  function createTransaction(storeName, mode) {
-    let transaction = db.transaction(storeName, mode);
-    transaction.onerror = (err) => {
-      console.warn(err);
-    };
-    return transaction;
-  }
-
   function validateString(string) {
     return nameRegex.test(string);
   }
@@ -124,5 +77,3 @@ const contactController = (function init(){
   function validatePhone(phone) {
     return phoneRegex.test(phone);
   }
-
-})();

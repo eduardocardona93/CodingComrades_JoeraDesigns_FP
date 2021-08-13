@@ -1,49 +1,12 @@
-const IDB = (function init() {
-
-  let db = null;
-  let objectStore = null;
-  let DBOpenReq = indexedDB.open('JoeraDB', 4);
+if(localStorage && localStorage.getItem('currentUser')){
+  location.href="index.html";
+}
 
   //REGEX
   let nameRegex = /^[a-zA-Z ]+$/;
   let emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let phoneRegex = /^[0-9]{10}$/;
   let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
-  DBOpenReq.addEventListener('error', (err) => {
-    //Error occurred while trying to open DB
-    console.warn(err);
-  });
-
-  DBOpenReq.addEventListener('success', (ev) => {
-    //DB has been opened... after upgradeneeded
-    db = ev.target.result;
-    console.log('success opening DB');
-  });
-
-  DBOpenReq.addEventListener('upgradeneeded', (ev) => {
-    //first time opening this DB
-    //OR a new version was passed into open()
-
-    console.log('upgrade', db);
-    db = ev.target.result;
-    let oldVersion = ev.oldVersion;
-    let newVersion = ev.newVersion || db.version;
-    console.log('Database updated from version', oldVersion, 'to version', newVersion);
-
-    if (db.objectStoreNames.contains('userStore')) {
-      db.deleteObjectStore('userStore');
-    }
-
-    //create the ObjectStore
-    objectStore = db.createObjectStore('userStore', {
-      keyPath: 'id',
-    });
-
-    //add the indexes
-    objectStore.createIndex('emailIDX', 'email', { unique: false });
-  });
-
 
   // Image upload 
   var fileTag = document.getElementById("filetag"),
@@ -66,13 +29,11 @@ const IDB = (function init() {
       reader.readAsDataURL(input.files[0]);
     }
   }
-
+  
+  function fetchData(){};
 
   document.getElementById('btnSignUp').addEventListener('click', (ev) => {
     ev.preventDefault();
-    //one of the form buttons was clicked
-
-    console.log("Sign up clicked");
     let firstName = document.getElementById('firstName').value.trim();
     let lastName = document.getElementById('lastName').value.trim();
     let birthday = document.getElementById('birthday').value.trim();
@@ -86,7 +47,6 @@ const IDB = (function init() {
     let consent = document.getElementById('consent').checked;
     let id = Math.floor(100000 + Math.random() * 900000);
 
-    console.log("consent: ", consent);
     if (firstName == "" || firstName == null || !validateString(firstName)) {
       alert("Please enter valid value for first name!");
       return;
@@ -112,10 +72,6 @@ const IDB = (function init() {
       alert("Password and Confirm password does not match!");
       return;
     }
-    //   else if(comments == "" || comments == null){
-    //     alert("Please enter valid value for comments!");
-    //     return;
-    //   } 
     else if (!consent) {
       alert("Please provide your consent!");
       return;
@@ -158,13 +114,6 @@ const IDB = (function init() {
     };
   });
 
-  function createTransaction(storeName, mode) {
-    let transaction = db.transaction(storeName, mode);
-    transaction.onerror = (err) => {
-      console.warn(err);
-    };
-    return transaction;
-  }
 
   document.getElementById('btnClearAll').addEventListener('click', clearForm);
 
@@ -188,5 +137,3 @@ const IDB = (function init() {
   function validatePassword(password) {
     return passwordRegex.test(password);
   }
-
-})();
