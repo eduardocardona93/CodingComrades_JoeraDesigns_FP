@@ -169,6 +169,45 @@ footer ul li{
     margin-bottom: 2em;
 }
 
+.clock{
+    text-align: center;
+}
+
+.countDown{
+    color: #1f1e1e;
+    font-weight: 100;
+    margin: 20px 0px 20px;
+}
+  
+#clockdiv{
+    font-family: sans-serif;
+    color: #fff;
+    display: inline-block;
+    font-weight: 100;
+    text-align: center;
+    font-size: 30px;
+}
+
+#clockdiv > div{
+    padding: 10px;
+    border-radius: 3px;
+    background: #2f2e2e;
+    display: inline-block;
+}
+
+#clockdiv div > span{
+    padding: 15px;
+    border-radius: 3px;
+    background: #4f4e4e;
+    display: inline-block;
+}
+
+.smalltext{
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+
 /* .firstLabel input[type=text]{
     width: 5em;
 }  */
