@@ -733,7 +733,7 @@ width: 100%;
 
 
 #faqDiv{
-    padding: 1em;
+    padding: 3em;
 }
 
 #faqDiv summary{
@@ -745,7 +745,16 @@ width: 100%;
     font-size: .5em;
     
 }
+.faq_que{
+    font-size: 1em;
+    font-weight: 400;
 
+}
+.faq__content{
+font-size: .9em;
+margin-left: 2em;
+margin-top: 1em;
+}
 
 /* ---------------------------Store Policy------------------*/
 
