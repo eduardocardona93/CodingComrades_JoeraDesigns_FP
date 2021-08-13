@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Joera Designs | Wishlist</title>
   <link rel="stylesheet" href="../css/index/styles.css" />
+  <link rel="stylesheet" href="../css/newcollection.css" />
   <link rel="icon" href="../src/favicon.ico">
 </head>
 
@@ -83,10 +84,13 @@
 
     <!-- main content of the website -->
     <main>
-        <section>
-
-        </section>
-
+      <h1>My wishlist</h1>
+      <input type="text" id="searchWishListInput" placeholder="Search...">
+      <button id="searchWishListButton"> Search </button>
+      <div>
+          <ul id="collectionList">
+          </ul>
+      </div>
     </main>
 
      <!-- footer of the webpage -->
@@ -130,6 +134,7 @@
   </div>
   <script src="../js/layout.controller.js"></script>
   <script src="../js/db.controller.js"></script>
+  <script src="../js/wishlist.controller.js"></script>
 </body>
 
 </html>
