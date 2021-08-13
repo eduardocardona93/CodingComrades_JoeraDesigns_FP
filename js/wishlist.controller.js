@@ -34,7 +34,7 @@ function fetchData(filterText){
         const imgItem = document.createElement('img');
         imgItem.style.width="100%";
         imgItem.className = "collectionImg";
-        imgItem.src="../src/prod-" +element.prodId+"-1.jpg";
+        imgItem.src="../src/products/prod-" +element.prodId+"-1.jpg";
     
         const captionContainer = document.createElement('div');
         captionContainer.className="captionContainer";
