@@ -2,16 +2,13 @@ if(!localStorage || !localStorage.getItem('currentUser')){
   location.href="index.html";
 }
 
-
-
-
 let nameRegex = /^[a-zA-Z ]+$/;
 let phoneRegex = /^[0-9]{10}$/;
 let imageBits="";
-
+var currentUser = {};
 
 function fetchData (){
-  var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  currentUser = JSON.parse(localStorage.getItem('currentUser'));
   document.getElementById('firstName').value = currentUser.firstName;
   document.getElementById('lastName').value = currentUser.lastName;
   document.getElementById('birthday').value = currentUser.birthday;
@@ -63,6 +60,7 @@ document.getElementById('btnUpdate').addEventListener('click', (ev) => {
     let transaction = createTransaction('userStore', 'readwrite');
     transaction.oncomplete = (ev) => {
       alert("Data updated succesfully!");
+      location.href = "index.html"
       localStorage.setItem('currentUser', JSON.stringify(currentUser));
     };
 
