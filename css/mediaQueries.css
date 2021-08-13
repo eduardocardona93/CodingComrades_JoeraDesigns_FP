@@ -141,7 +141,7 @@ margin-right: 1em;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 5%;
-    line-height: 2em;
+    line-height: 1.8em;
     padding-bottom: 5%;
 }
 
@@ -185,6 +185,20 @@ margin-right: 1em;
   flex-direction: row;
   margin-left: 12%;
   margin-right: 12%;
+}
+
+/* Media query for desktop width size */
+@media only screen and (min-width: 1100px) {
+  .content p {
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+    line-height: 4em;
+    padding-bottom: 5%;
+}
 }
 
 
