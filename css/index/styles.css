@@ -42,10 +42,7 @@ transform: translate(-50%, -50%);
     padding-top: 2.5em;
     padding-left: 2em;
     padding-right: 2em;
-    /*border-bottom: 0.01em solid #000;*/
     padding-bottom: 2.5em;
-    /*margin-left: 1em;
-    margin-right: 1em;*/
     background-color: #ddd;
     color: #fff;
 }
